@@ -1,0 +1,41 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin topTxt {
+  width: 67%;
+  line-height: 18px;
+  font-size: 14px;
+  transform: translateY(-10px);
+}
+
+@mixin forInput {
+  width: 100%;
+  padding-top: 10px;
+  @include flex(column);
+  padding-right: 4%;
+  gap: 0.6em;
+  label {
+    input {
+      width: 100%;
+      padding: 10px;
+      padding-left: 17px;
+      border-radius: 40px;
+      outline: none;
+      border: 1.5px solid silver;
+      &:focus {
+        border-color: $p;
+      }
+    }
+  }
+}
+
+@mixin btn {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  background-color: $p;
+  color: white;
+  border: none;
+}

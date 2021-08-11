@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;800&family=Hind+Siliguri:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>টালিখাতা</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- welcome section -->
+      <div class="welcome">
+        <div class="welcome-wrapper">
+          <div class="welcome-first">
+            <img src="img/talikhata.png" alt="" />
+          </div>
+          <div class="welcome-second">
+            <p class="welocome-txt">
+              স্বাগতম! মোবাইল নম্বর দিয়ে টালিখাতায় একাউন্ট তৈরি করুন ।
+            </p>
+          </div>
+          <div class="welcome-third">
+            <!-- <form action=""> -->
+            <label for="name">
+              <input
+                name="name"
+                type="text"
+                placeholder="ব্যাবসা প্রতিষ্ঠানের নাম "
+                required
+              />
+            </label>
+
+            <label for="number">
+              <input
+                name="number"
+                type="text"
+                onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                inputmode="tel"
+                placeholder="মোবাইল নম্বর "
+                required
+              />
+            </label>
+
+            <button class="welcome-btn" id="welcome-btn" type="submit">
+              পরবর্তী
+            </button>
+            <!-- </form> -->
+          </div>
+          <div class="welcome-fourth">
+            <p>
+              পরবর্তীতে যাওয়ার নির্দেশের মাধ্যমে আপনি টালিখাতার
+              <a href="#">শর্তাবলীতে</a> সম্মতি প্রদান করেছেন ।
+            </p>
+            <p class="welcome-footer">আমি ইতিমধ্যে টালিখাতা ব্যবহার করেছি ।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- set code section -->
+
+      <div class="set-code">
+        <div class="set-code-wrapper">
+          <div class="set-code-first">
+            <img src="img/talikhata.png" alt="" />
+          </div>
+          <div class="set-code-second">
+            <p>আপনার তথ্য সুরক্ষিত রাখতে ডিজিট PIN তৈরি করুন ।</p>
+          </div>
+          <div class="set-code-third">
+            <label for="pin">
+              <input name="pin" type="password" placeholder="পিন দিন " />
+              <i class="material-icons">visibility_off</i>
+            </label>
+            <label for="re-pin">
+              <input
+                name="re-pin"
+                type="password"
+                placeholder="পুনরায় পিন দিন  "
+              />
+              <i class="material-icons">visibility_off</i>
+            </label>
+            <button class="set-code-btn" id="set-code-btn" type="submit">
+              নিশ্চিত
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

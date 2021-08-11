@@ -1,0 +1,17 @@
+@import "color";
+@import "mixin";
+@import "welcome";
+@import "setCode";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // font-family: 'Baloo Da 2', cursive;
+  font-family: "Hind Siliguri", sans-serif;
+}

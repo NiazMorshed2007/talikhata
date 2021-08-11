@@ -1,0 +1,55 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .welcome {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    .welcome-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      @include flex(column);
+      padding-left: 4%;
+      padding-top: 10%;
+      .welcome-first {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .welcome-second {
+        @include topTxt;
+      }
+      .welcome-third {
+        @include forInput;
+        .welcome-btn {
+          @include btn;
+        }
+        .welcome-btn-disabled {
+          opacity: 0.6;
+        }
+      }
+      .welcome-fourth {
+        text-align: center;
+        font-size: 12px;
+        padding-top: 20px;
+        padding-right: 4%;
+        line-height: 17px;
+        a {
+          color: $p;
+        }
+        .welcome-footer {
+          color: $p;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
