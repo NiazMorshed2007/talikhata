@@ -32,7 +32,7 @@
         .welcome-btn {
           @include btn;
         }
-        .welcome-btn-disabled {
+        .disabled {
           opacity: 0.6;
         }
       }
