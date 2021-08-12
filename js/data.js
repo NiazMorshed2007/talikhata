@@ -5,6 +5,7 @@ function nameAndNumber() {
 
   localStorage.setItem("name", companyName);
   localStorage.setItem("number", mobileNumber);
+  headerName.innerHTML = localStorage.getItem("name");
   console.log(localStorage);
 }
 
