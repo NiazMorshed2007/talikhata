@@ -1,44 +1,19 @@
-var welcomeSection = document.querySelector(".welcome");
-var setCodeSection = document.querySelector(".set-code");
+// sections
 var homeSection = document.querySelector(".home");
-var welcomeBtn = document.getElementById("welcome-btn");
-var setCodeBtn = document.getElementById("set-code-btn");
-var welcomeInput = document.querySelectorAll(".welcome-third > label > input");
-var setCodeInput = document.querySelectorAll(".set-code-third > label > input");
-var nameInput = document.getElementById("name");
-var numberInput = document.getElementById("number");
-var pinInput = document.getElementById("pinInput");
-var visibility = document.querySelectorAll(".visibility");
+var helpSection = document.querySelector(".help");
 
+// declare
+var helpBtn = document.querySelector(".second-home-header");
+
+// if logged in
 let loggedIn = false;
 
-//addding event for welcome section
-welcomeBtn.addEventListener("click", nameAndNumber);
-welcomeBtn.addEventListener("click", emptyInput);
-welcomeBtn.addEventListener("click", () => {
-  activeSection(setCodeSection);
-});
-setInterval(() => {
-  disableBtn(welcomeInput, welcomeBtn);
-  btnFunc(welcomeBtn);
-}, 1000);
-
-// adding event for seCode Section
-setCodeBtn.addEventListener("click", () => {
-  activeSection(homeSection);
-});
-setCodeBtn.addEventListener("click", logged);
-setCodeBtn.addEventListener("click", savePin);
-visibility.forEach((e, i) => {
-  toggleVisibility(e, i, setCodeInput);
+// adding event for home section
+helpBtn.addEventListener("click", () => {
+  activeSection(helpSection);
 });
 
-setInterval(() => {
-  checkPin(setCodeInput, setCodeBtn);
-  btnFunc(setCodeBtn);
-}, 1000);
-
-// writting functions
+// writing functions
 function disableBtn(input, btn) {
   if (input[0].value === "" || input[1].value === "") {
     btn.disabled = true;
