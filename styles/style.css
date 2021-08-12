@@ -1,3 +1,34 @@
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.loader-wrapper .loader {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-wrapper .loader img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;

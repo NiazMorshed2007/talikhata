@@ -7,7 +7,7 @@ var welcomeInput = document.querySelectorAll(".welcome-third > label > input");
 var setCodeInput = document.querySelectorAll(".set-code-third > label > input");
 var nameInput = document.getElementById("name");
 var numberInput = document.getElementById("number");
-// var
+var pinInput = document.getElementById("pinInput");
 var visibility = document.querySelectorAll(".visibility");
 
 let loggedIn = false;
@@ -28,6 +28,7 @@ setCodeBtn.addEventListener("click", () => {
   activeSection(homeSection);
 });
 setCodeBtn.addEventListener("click", logged);
+setCodeBtn.addEventListener("click", savePin);
 visibility.forEach((e, i) => {
   toggleVisibility(e, i, setCodeInput);
 });

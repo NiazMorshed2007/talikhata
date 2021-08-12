@@ -24,8 +24,15 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
-  <body>
+  <body onload="goHomeDirect()">
     <div class="wrapper">
+      <!-- loader -->
+      <div class="loader-wrapper">
+        <div class="loader">
+          <img src="img/loader.jpg" alt="" />
+        </div>
+      </div>
+
       <!-- welcome section -->
       <div class="welcome">
         <div class="welcome-wrapper">
@@ -109,6 +116,7 @@
       </div>
     </div>
 
+    <script src="js/loader.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
   </body>

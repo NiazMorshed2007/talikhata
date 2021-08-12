@@ -9,7 +9,10 @@ function nameAndNumber() {
 }
 
 function savePin() {
-  // var pin =
+  var pin = pinInput.value;
+
+  localStorage.setItem("pin", pin);
+  console.log(localStorage);
 }
 
 function logged() {
@@ -18,3 +21,14 @@ function logged() {
   localStorage.setItem("logged", loggedIn);
   console.log(localStorage);
 }
+
+function goHomeDirect() {
+  if (localStorage.getItem("logged")) {
+    activeSection(homeSection);
+  } else {
+    console.log("not-logged");
+  }
+  // logged();
+  // console.log(localStorage.getItem("logged"));
+}
+//
