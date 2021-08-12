@@ -326,7 +326,7 @@
 }
 
 .home .home-wrapper .home-header .first-home-header {
-  width: 50%;
+  width: 80%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -356,6 +356,55 @@
   padding-left: 5%;
   font-size: 300;
   font-family: "Roboto", sans-serif;
+}
+
+.home .home-wrapper .home-header .second-home-header {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+}
+
+.home .home-wrapper .home-header .second-home-header i {
+  font-size: 17px;
+}
+
+.home .home-wrapper .home-main {
+  width: 100%;
+  height: 82%;
+}
+
+.home .home-wrapper .home-footer {
+  width: 100%;
+  height: 9%;
+  background-color: #b82329;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.home .home-wrapper .home-footer > :nth-child(1) {
+  background: #9c1e22;
 }
 
 .active {
