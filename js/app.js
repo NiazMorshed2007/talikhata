@@ -7,16 +7,28 @@ var welcomeInput = document.querySelectorAll(".welcome-third > label > input");
 var setCodeInput = document.querySelectorAll(".set-code-third > label > input");
 var nameInput = document.getElementById("name");
 var numberInput = document.getElementById("number");
+var visibility = document.querySelectorAll(".visibility");
 
 let loggedIn = false;
 
+//addding event for welcome section
 welcomeBtn.addEventListener("click", nameAndNumber);
 welcomeBtn.addEventListener("click", emptyInput);
 welcomeBtn.addEventListener("click", () => {
   activeSection(setCodeSection);
 });
+setInterval(() => {
+  disableBtn(welcomeInput, welcomeBtn);
+  btnFunc(welcomeBtn);
+}, 1000);
+
+// adding event for seCode Section
 setCodeBtn.addEventListener("click", () => {
   activeSection(homeSection);
+});
+
+visibility.forEach((e, i) => {
+  toggleVisibility(e, i, setCodeInput);
 });
 
 setInterval(() => {
@@ -24,11 +36,7 @@ setInterval(() => {
   btnFunc(setCodeBtn);
 }, 1000);
 
-setInterval(() => {
-  disableBtn(welcomeInput, welcomeBtn);
-  btnFunc(welcomeBtn);
-}, 1000);
-
+// writting functions
 function disableBtn(input, btn) {
   if (input[0].value === "" || input[1].value === "") {
     btn.disabled = true;
@@ -56,6 +64,19 @@ function checkPin(input, btn) {
 function emptyInput() {
   welcomeInput.forEach((e) => {
     e.value = "";
+  });
+}
+
+function toggleVisibility(e, i, input) {
+  e.addEventListener("click", () => {
+    e.innerHTML === "visibility_off"
+      ? (e.innerHTML = "visibility")
+      : (e.innerHTML = "visibility_off");
+
+    const type =
+      input[i].getAttribute("type") === "password" ? "text" : "password";
+    input[i].setAttribute("type", type);
+    // setCodeInput[i].attributes
   });
 }
 

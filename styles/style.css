@@ -225,6 +225,15 @@
   transition: all 0.25s ease;
 }
 
+.set-code .set-code-wrapper .set-code-third i {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  margin-top: 8px;
+  color: #3b3b3b;
+  font-size: 20px;
+}
+
 .set-code .set-code-wrapper .set-code-third .set-code-btn {
   padding: 10px;
   border-radius: 5px;
