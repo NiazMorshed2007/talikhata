@@ -7,6 +7,7 @@ var welcomeInput = document.querySelectorAll(".welcome-third > label > input");
 var setCodeInput = document.querySelectorAll(".set-code-third > label > input");
 var nameInput = document.getElementById("name");
 var numberInput = document.getElementById("number");
+// var
 var visibility = document.querySelectorAll(".visibility");
 
 let loggedIn = false;
@@ -26,7 +27,7 @@ setInterval(() => {
 setCodeBtn.addEventListener("click", () => {
   activeSection(homeSection);
 });
-
+setCodeBtn.addEventListener("click", logged);
 visibility.forEach((e, i) => {
   toggleVisibility(e, i, setCodeInput);
 });

@@ -7,3 +7,14 @@ function nameAndNumber() {
   localStorage.setItem("number", mobileNumber);
   console.log(localStorage);
 }
+
+function savePin() {
+  // var pin =
+}
+
+function logged() {
+  // let logged = false;
+  loggedIn = true;
+  localStorage.setItem("logged", loggedIn);
+  console.log(localStorage);
+}
