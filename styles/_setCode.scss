@@ -25,22 +25,38 @@
     .set-code-third {
       @include forInput;
       padding-top: 20px;
-      label {
-        i {
-          position: absolute;
-          margin-left: -34px;
-          margin-top: 8px;
-          color: rgb(59, 59, 59);
-          font-size: 20px;
-        }
-      }
+      // label {
+      //   input {
+      //     &:valid ~ span {
+      //       // color: red;
+      //       transform: translateY(0px);
+      //     }
+      //   }
+      //   span {
+      //     position: absolute;
+      //     display: block;
+      //     color: silver;
+      //     top: 18%;
+      //     left: 8%;
+      //     pointer-events: none;
+      //     font-size: 14px;
+      //     background: white;
+      //     transition: all 0.25s ease;
+      //   }
+      // }
+      // i {
+      //   position: absolute;
+      //   top: 8%;
+      //   right: 4%;
+      //   margin-top: 8px;
+      //   color: rgb(59, 59, 59);
+      //   font-size: 20px;
+      // }
+      // }
       .set-code-btn {
         @include btn;
       }
       .disabled {
-        opacity: 0.6;
-      }
-      .welcome-btn-disabled {
         opacity: 0.6;
       }
     }

@@ -40,13 +40,8 @@
           <div class="welcome-third">
             <!-- <form action=""> -->
             <label for="name">
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="ব্যাবসা প্রতিষ্ঠানের নাম "
-                required
-              />
+              <input id="name" name="name" type="text" required />
+              <span>ব্যাবসা প্রতিষ্ঠানের নাম</span>
             </label>
 
             <label for="number">
@@ -56,9 +51,9 @@
                 type="text"
                 onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
                 inputmode="tel"
-                placeholder="মোবাইল নম্বর "
                 required
               />
+              <span>মোবাইল নম্বর</span>
             </label>
 
             <button class="welcome-btn" id="welcome-btn" type="submit">
@@ -88,16 +83,14 @@
           </div>
           <div class="set-code-third">
             <label for="pin">
-              <input name="pin" type="password" placeholder="পিন দিন " />
-              <i class="material-icons">visibility_off</i>
+              <input name="pin" type="password" />
+              <span>পিন দিন</span>
+              <!-- <i class="material-icons">visibility_off</i> -->
             </label>
             <label for="re-pin">
-              <input
-                name="re-pin"
-                type="password"
-                placeholder="পুনরায় পিন দিন  "
-              />
-              <i class="material-icons">visibility_off</i>
+              <input name="re-pin" type="password" />
+              <span>পুনরায় পিন দিন</span>
+              <!-- <i class="material-icons">visibility_off</i> -->
             </label>
             <button class="set-code-btn" id="set-code-btn" type="submit">
               নিশ্চিত
@@ -107,7 +100,9 @@
       </div>
 
       <!-- home -->
-      <div class="home">home</div>
+      <div class="home">
+        <div class="home-wrapper"></div>
+      </div>
     </div>
 
     <script src="js/data.js"></script>

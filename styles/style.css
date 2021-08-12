@@ -55,6 +55,10 @@
   gap: 0.6em;
 }
 
+.wrapper .welcome .welcome-wrapper .welcome-third label {
+  position: relative;
+}
+
 .wrapper .welcome .welcome-wrapper .welcome-third label input {
   width: 100%;
   padding: 10px;
@@ -66,6 +70,32 @@
 
 .wrapper .welcome .welcome-wrapper .welcome-third label input:focus {
   border-color: #f03030;
+}
+
+.wrapper .welcome .welcome-wrapper .welcome-third label input:focus ~ span {
+  color: red;
+  font-size: 11px;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.wrapper .welcome .welcome-wrapper .welcome-third label input:valid ~ span {
+  font-size: 11px;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.wrapper .welcome .welcome-wrapper .welcome-third label span {
+  position: absolute;
+  display: block;
+  color: silver;
+  top: 18%;
+  left: 8%;
+  pointer-events: none;
+  font-size: 14px;
+  background: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .wrapper .welcome .welcome-wrapper .welcome-third .welcome-btn {
@@ -152,6 +182,10 @@
   padding-top: 20px;
 }
 
+.set-code .set-code-wrapper .set-code-third label {
+  position: relative;
+}
+
 .set-code .set-code-wrapper .set-code-third label input {
   width: 100%;
   padding: 10px;
@@ -165,12 +199,30 @@
   border-color: #f03030;
 }
 
-.set-code .set-code-wrapper .set-code-third label i {
+.set-code .set-code-wrapper .set-code-third label input:focus ~ span {
+  color: red;
+  font-size: 11px;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.set-code .set-code-wrapper .set-code-third label input:valid ~ span {
+  font-size: 11px;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.set-code .set-code-wrapper .set-code-third label span {
   position: absolute;
-  margin-left: -34px;
-  margin-top: 8px;
-  color: #3b3b3b;
-  font-size: 20px;
+  display: block;
+  color: silver;
+  top: 18%;
+  left: 8%;
+  pointer-events: none;
+  font-size: 14px;
+  background: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .set-code .set-code-wrapper .set-code-third .set-code-btn {
@@ -183,10 +235,6 @@
 }
 
 .set-code .set-code-wrapper .set-code-third .disabled {
-  opacity: 0.6;
-}
-
-.set-code .set-code-wrapper .set-code-third .welcome-btn-disabled {
   opacity: 0.6;
 }
 
