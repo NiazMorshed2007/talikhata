@@ -17,6 +17,7 @@
   padding-right: 4%;
   gap: 0.6em;
   label {
+    position: relative;
     input {
       width: 100%;
       padding: 10px;
@@ -27,6 +28,26 @@
       &:focus {
         border-color: $p;
       }
+      &:focus ~ span {
+        color: red;
+        font-size: 11px;
+        transform: translateY(-15px);
+      }
+      &:valid ~ span {
+        font-size: 11px;
+        transform: translateY(-15px);
+      }
+    }
+    span {
+      position: absolute;
+      display: block;
+      color: silver;
+      top: 18%;
+      left: 8%;
+      pointer-events: none;
+      font-size: 14px;
+      background: white;
+      transition: all 0.25s ease;
     }
   }
 }
