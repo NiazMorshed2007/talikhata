@@ -74,6 +74,7 @@
                 align-items: center;
                 justify-content: center;
                 border: 1px solid white;
+                z-index: 1;
                 img {
                   width: 45%;
                   height: 45%;
@@ -156,19 +157,30 @@
           .help-question-wrapper {
             width: 100%;
             @include flex(column);
-            padding-bottom: 7px;
+            padding-bottom: 2px;
             border-bottom: 1px solid silver;
             .help-question-heading {
               width: 100%;
               @include flex(row);
               align-items: center;
               justify-content: space-between;
+              padding-bottom: 10px;
             }
             .help-question-answer {
               display: none;
+              padding-bottom: 10px;
+              p {
+                line-height: 23px;
+              }
+              ul {
+                @include styleList;
+              }
             }
           }
           .active {
+            .help-question-heading {
+              color: $active;
+            }
             .help-question-answer {
               display: block;
               animation: fadeIn 0.4s ease 1;

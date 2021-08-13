@@ -60,3 +60,20 @@
   color: white;
   border: none;
 }
+
+@mixin styleList {
+  list-style: none;
+  padding-left: 20px;
+  padding-top: 15px;
+  li {
+    line-height: 23px;
+    &::before {
+      content: "\2022";
+      color: $active;
+      font-weight: bold;
+      display: inline-block;
+      width: 0.7em;
+      margin-left: -1em;
+    }
+  }
+}
