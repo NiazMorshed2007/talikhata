@@ -3,7 +3,8 @@ var homeSection = document.querySelector(".home");
 var helpSection = document.querySelector(".help");
 
 var helpQuestionWrapper = document.querySelectorAll(".help-question-wrapper");
-var showAnswerArrrow = document.querySelectorAll(".help-show-answer-arrow");
+var helpQuestionHeading = document.querySelectorAll(".help-question-heading");
+var showAnswerArrow = document.querySelectorAll(".help-show-answer-arrow");
 // declare
 var helpBtn = document.querySelector(".second-home-header");
 var homeFromHelpBtn = document.querySelector(".home-from-help");
@@ -79,10 +80,10 @@ function toggleAnswer(e, i) {
       : e.classList.add("active");
 
     const arrow =
-      showAnswerArrrow[i].innerHTML === "keyboard_arrow_right"
+      showAnswerArrow[i].innerHTML === "keyboard_arrow_right"
         ? "keyboard_arrow_down"
         : "keyboard_arrow_right";
-    showAnswerArrrow[i].innerHTML = arrow;
+    showAnswerArrow[i].innerHTML = arrow;
   });
 }
 
