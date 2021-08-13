@@ -570,6 +570,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid white;
+  z-index: 1;
 }
 
 .help .help-wrapper .help-main .help-inner-main .help-video a .help-video-txt .help-video-icon img {
@@ -690,7 +691,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 7px;
+  padding-bottom: 2px;
   border-bottom: 1px solid silver;
 }
 
@@ -709,10 +710,39 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 .help .help-wrapper .help-main .help-inner-main .help-description .help-question-wrapper .help-question-answer {
   display: none;
+  padding-bottom: 10px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-description .help-question-wrapper .help-question-answer p {
+  line-height: 23px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-description .help-question-wrapper .help-question-answer ul {
+  list-style: none;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-description .help-question-wrapper .help-question-answer ul li {
+  line-height: 23px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-description .help-question-wrapper .help-question-answer ul li::before {
+  content: "\2022";
+  color: #9c1e22;
+  font-weight: bold;
+  display: inline-block;
+  width: 0.7em;
+  margin-left: -1em;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-description .active .help-question-heading {
+  color: #9c1e22;
 }
 
 .help .help-wrapper .help-main .help-inner-main .help-description .active .help-question-answer {

@@ -3,16 +3,16 @@ var homeSection = document.querySelector(".home");
 var helpSection = document.querySelector(".help");
 
 var helpQuestionWrapper = document.querySelectorAll(".help-question-wrapper");
+var showAnswerArrrow = document.querySelectorAll(".help-show-answer-arrow");
 // declare
 var helpBtn = document.querySelector(".second-home-header");
 var homeFromHelpBtn = document.querySelector(".home-from-help");
 // if logged in
+let loggedIn = false;
 // let opened = false;
 
 helpQuestionWrapper.forEach((e, i) => {
-  toggleAnswer(e);
-
-  // singleAnswer(e, i);
+  toggleAnswer(e, i);
 });
 
 // adding event for home section
@@ -72,25 +72,19 @@ function activeSection(section) {
   section.classList.add("active");
 }
 
-function toggleAnswer(e) {
+function toggleAnswer(e, i) {
   e.addEventListener("click", () => {
     e.classList.contains("active")
       ? e.classList.remove("active")
       : e.classList.add("active");
+
+    const arrow =
+      showAnswerArrrow[i].innerHTML === "keyboard_arrow_right"
+        ? "keyboard_arrow_down"
+        : "keyboard_arrow_right";
+    showAnswerArrrow[i].innerHTML = arrow;
   });
 }
-
-// function singleAnswer(e, i) {
-//   e.addEventListener("click", () => {
-//     for (let j = 0; j < helpQuestionWrapper.length; j++) {
-//       if (j == i) {
-//         helpQuestionWrapper[i].classList.add("active");
-//       } else {
-//         helpQuestionWrapper[j].classList.remove("active");
-//       }
-//     }
-//   });
-// }
 
 function unactiveSection(section) {
   section.classList.remove("active");
