@@ -2,11 +2,18 @@
 var homeSection = document.querySelector(".home");
 var helpSection = document.querySelector(".help");
 
+var helpQuestionWrapper = document.querySelectorAll(".help-question-wrapper");
 // declare
 var helpBtn = document.querySelector(".second-home-header");
 var homeFromHelpBtn = document.querySelector(".home-from-help");
 // if logged in
-let loggedIn = false;
+// let opened = false;
+
+helpQuestionWrapper.forEach((e, i) => {
+  toggleAnswer(e);
+
+  // singleAnswer(e, i);
+});
 
 // adding event for home section
 helpBtn.addEventListener("click", () => {
@@ -64,6 +71,26 @@ function toggleVisibility(e, i, input) {
 function activeSection(section) {
   section.classList.add("active");
 }
+
+function toggleAnswer(e) {
+  e.addEventListener("click", () => {
+    e.classList.contains("active")
+      ? e.classList.remove("active")
+      : e.classList.add("active");
+  });
+}
+
+// function singleAnswer(e, i) {
+//   e.addEventListener("click", () => {
+//     for (let j = 0; j < helpQuestionWrapper.length; j++) {
+//       if (j == i) {
+//         helpQuestionWrapper[i].classList.add("active");
+//       } else {
+//         helpQuestionWrapper[j].classList.remove("active");
+//       }
+//     }
+//   });
+// }
 
 function unactiveSection(section) {
   section.classList.remove("active");

@@ -26,13 +26,13 @@
         padding-left: 2%;
         .burger {
           div {
-            width: 20px;
+            width: 17px;
             height: 2px;
-            background: black;
+            background: $active;
             margin: 3px;
           }
           .line2 {
-            width: 15px;
+            width: 13px;
           }
         }
         p {
@@ -46,8 +46,8 @@
         height: 100%;
         @include flex(row);
         align-items: center;
-        gap: 0.2em;
-        font-size: 15px;
+        gap: 0.02em;
+        font-size: 17px;
         color: $most;
         i {
           font-size: 17px;

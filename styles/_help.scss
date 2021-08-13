@@ -30,18 +30,21 @@
     .help-main {
       width: 100%;
       height: 91%;
+      overflow-y: scroll;
+
+      // overflow: hidden;
       .help-inner-main {
         @include flex(column);
         gap: 0.8em;
-        overflow-y: scroll;
         align-items: center;
         width: 100%;
-        height: 100%;
+        // height: 100%;
         padding-top: 15px;
+        padding-bottom: 15px;
         overflow-x: hidden;
         .help-video {
           width: 90%;
-          height: 35%;
+          height: 180px;
           overflow: hidden;
           background: $litePink;
           border-radius: 7px;
@@ -94,7 +97,7 @@
 
         .live-help {
           width: 90%;
-          height: 30%;
+          height: 150px;
           @include flex(row);
           background: $silverType;
           border-radius: 7px;
@@ -139,6 +142,39 @@
             }
           }
         }
+
+        .help-description {
+          width: 90%;
+          @include flex(column);
+          gap: 0.6em;
+          .help-description-heading {
+            h4 {
+              color: rgb(165, 165, 165);
+              font-size: 15px;
+            }
+          }
+          .help-question-wrapper {
+            width: 100%;
+            @include flex(column);
+            padding-bottom: 7px;
+            border-bottom: 1px solid silver;
+            .help-question-heading {
+              width: 100%;
+              @include flex(row);
+              align-items: center;
+              justify-content: space-between;
+            }
+            .help-question-answer {
+              display: none;
+            }
+          }
+          .active {
+            .help-question-answer {
+              display: block;
+              animation: fadeIn 0.4s ease 1;
+            }
+          }
+        }
       }
     }
   }
@@ -146,4 +182,17 @@
 
 .active {
   transform: translateX(0%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
 }
