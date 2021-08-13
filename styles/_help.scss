@@ -12,6 +12,135 @@
     width: 100%;
     height: 100%;
     position: relative;
+    @include flex(column);
+    .help-header {
+      width: 100%;
+      height: 9%;
+      background: $pinkType;
+      @include flex(row);
+      align-items: center;
+      gap: 0.6em;
+      font-size: 18px;
+      font-weight: 500;
+      padding-left: 10px;
+      i {
+        font-size: 20px;
+      }
+    }
+    .help-main {
+      width: 100%;
+      height: 91%;
+      .help-inner-main {
+        @include flex(column);
+        gap: 0.8em;
+        overflow-y: scroll;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 15px;
+        overflow-x: hidden;
+        .help-video {
+          width: 90%;
+          height: 35%;
+          overflow: hidden;
+          background: $litePink;
+          border-radius: 7px;
+          position: relative;
+          a {
+            text-decoration: none;
+            .help-video-txt {
+              width: 100%;
+              text-align: center;
+              padding-top: 10px;
+              color: $txtColor;
+              @include flex(column);
+              align-items: center;
+              justify-content: center;
+              h4 {
+                font-size: 15px;
+              }
+              p {
+                font-size: 12px;
+              }
+              .help-video-icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: rgba($color: #000000, $alpha: 0.6);
+                @include flex(row);
+                align-items: center;
+                justify-content: center;
+                border: 1px solid white;
+                img {
+                  width: 45%;
+                  height: 45%;
+                  position: relative;
+                  transform: translateY(0px);
+                  left: 0%;
+                  opacity: 1;
+                }
+              }
+            }
+            img {
+              width: 80%;
+              position: absolute;
+              object-fit: cover;
+              transform: translate(-50%, -33px);
+              left: 50%;
+              opacity: 0.7;
+            }
+          }
+        }
+
+        .live-help {
+          width: 90%;
+          height: 30%;
+          @include flex(row);
+          background: $silverType;
+          border-radius: 7px;
+          .live-help-txt {
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+            padding-left: 15px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-40%);
+            .live-txt {
+              font-size: 14px;
+              line-height: 19px;
+            }
+            button {
+              @include flex(row);
+              margin-top: 14px;
+              gap: 0.2em;
+              align-items: center;
+              font-size: 12px;
+              border: none;
+              background: $messengerClr;
+              padding: 4px 7px 4px 7px;
+              color: white;
+              border-radius: 4px;
+              img {
+                width: 15px;
+                height: 15px;
+                object-fit: cover;
+              }
+            }
+          }
+          .live-help-img-wrapper {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              transform: scale(1.04);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

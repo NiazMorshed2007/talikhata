@@ -4,13 +4,17 @@ var helpSection = document.querySelector(".help");
 
 // declare
 var helpBtn = document.querySelector(".second-home-header");
-
+var homeFromHelpBtn = document.querySelector(".home-from-help");
 // if logged in
 let loggedIn = false;
 
 // adding event for home section
 helpBtn.addEventListener("click", () => {
   activeSection(helpSection);
+});
+
+homeFromHelpBtn.addEventListener("click", () => {
+  unactiveSection(helpSection);
 });
 
 // writing functions
@@ -59,4 +63,8 @@ function toggleVisibility(e, i, input) {
 
 function activeSection(section) {
   section.classList.add("active");
+}
+
+function unactiveSection(section) {
+  section.classList.remove("active");
 }

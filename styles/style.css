@@ -312,7 +312,7 @@
 .home .home-wrapper .home-header {
   width: 100%;
   height: 9%;
-  background: pink;
+  background: #f8dedf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,6 +371,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.2em;
   font-size: 15px;
   color: #b82329;
 }
@@ -451,6 +452,215 @@
   width: 100%;
   height: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.help .help-wrapper .help-header {
+  width: 100%;
+  height: 9%;
+  background: #f8dedf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6em;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.help .help-wrapper .help-header i {
+  font-size: 20px;
+}
+
+.help .help-wrapper .help-main {
+  width: 100%;
+  height: 91%;
+}
+
+.help .help-wrapper .help-main .help-inner-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8em;
+  overflow-y: scroll;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  overflow-x: hidden;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video {
+  width: 90%;
+  height: 35%;
+  overflow: hidden;
+  background: #f8dedf8c;
+  border-radius: 7px;
+  position: relative;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video a {
+  text-decoration: none;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video a .help-video-txt {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  color: #bf1313;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video a .help-video-txt h4 {
+  font-size: 15px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video a .help-video-txt p {
+  font-size: 12px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video a .help-video-txt .help-video-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid white;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video a .help-video-txt .help-video-icon img {
+  width: 45%;
+  height: 45%;
+  position: relative;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  left: 0%;
+  opacity: 1;
+}
+
+.help .help-wrapper .help-main .help-inner-main .help-video a img {
+  width: 80%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: translate(-50%, -33px);
+          transform: translate(-50%, -33px);
+  left: 50%;
+  opacity: 0.7;
+}
+
+.help .help-wrapper .help-main .help-inner-main .live-help {
+  width: 90%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #f4f3f3;
+  border-radius: 7px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .live-help .live-help-txt {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  padding-left: 15px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+}
+
+.help .help-wrapper .help-main .help-inner-main .live-help .live-help-txt .live-txt {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .live-help .live-help-txt button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 14px;
+  gap: 0.2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  border: none;
+  background: #076ece;
+  padding: 4px 7px 4px 7px;
+  color: white;
+  border-radius: 4px;
+}
+
+.help .help-wrapper .help-main .help-inner-main .live-help .live-help-txt button img {
+  width: 15px;
+  height: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.help .help-wrapper .help-main .help-inner-main .live-help .live-help-img-wrapper {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.help .help-wrapper .help-main .help-inner-main .live-help .live-help-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 .active {
