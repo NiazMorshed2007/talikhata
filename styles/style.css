@@ -389,7 +389,7 @@
 
 .home .home-wrapper .home-main .home-when-empty {
   width: 85%;
-  height: auto;
+  height: 60%;
   background: white;
   position: absolute;
   display: block;
@@ -400,6 +400,21 @@
   -webkit-box-shadow: 0px 3px 7px rgba(197, 178, 3, 0.603);
           box-shadow: 0px 3px 7px rgba(197, 178, 3, 0.603);
   border-radius: 7px;
+}
+
+.home .home-wrapper .home-main .home-when-empty::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  bottom: -4%;
+  right: 15%;
+  background: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-bottom: 1px solid rgba(197, 178, 3, 0.603);
+  border-left: 1px solid rgba(197, 178, 3, 0.603);
 }
 
 .home .home-wrapper .home-main .home-when-empty .home-when-empty-first {
@@ -508,22 +523,6 @@
           justify-content: center;
   padding-bottom: 15px;
   gap: 0.3em;
-  position: relative;
-}
-
-.home .home-wrapper .home-main .home-when-empty .home-when-empty-fourth::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  bottom: -27%;
-  right: 15%;
-  background: white;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  border-bottom: 1px solid rgba(197, 178, 3, 0.603);
-  border-left: 1px solid rgba(197, 178, 3, 0.603);
 }
 
 .home .home-wrapper .home-main .home-when-empty .home-when-empty-fourth span {
@@ -536,6 +535,8 @@
 }
 
 .home .home-wrapper .home-main .home-add-customer {
+  width: 160px;
+  height: 45px;
   position: fixed;
   bottom: 12%;
   right: 5%;
@@ -553,7 +554,7 @@
   padding: 7px;
   background: #b82329;
   color: white;
-  border-radius: 20px;
+  border-radius: 25px;
   font-size: 14px;
   padding-left: 20px;
   padding-right: 20px;

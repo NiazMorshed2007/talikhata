@@ -60,7 +60,7 @@
       position: relative;
       .home-when-empty {
         width: 85%;
-        height: auto;
+        height: 60%;
         background: white;
         position: absolute;
         display: block;
@@ -69,6 +69,19 @@
         transform: translate(-50%, -50%);
         box-shadow: 0px 3px 7px rgba(197, 178, 3, 0.603);
         border-radius: 7px;
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 20px;
+          height: 20px;
+          bottom: -4%;
+          right: 15%;
+          background: white;
+          transform: rotate(-45deg);
+          border-bottom: 1px solid rgba(197, 178, 3, 0.603);
+          border-left: 1px solid rgba(197, 178, 3, 0.603);
+        }
         .home-when-empty-first {
           width: 100%;
           border-top-left-radius: 7px;
@@ -119,20 +132,8 @@
           justify-content: center;
           padding-bottom: 15px;
           gap: 0.3em;
-          position: relative;
-          &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 20px;
-            height: 20px;
-            bottom: -27%;
-            right: 15%;
-            background: white;
-            transform: rotate(-45deg);
-            border-bottom: 1px solid rgba(197, 178, 3, 0.603);
-            border-left: 1px solid rgba(197, 178, 3, 0.603);
-          }
+          // position: relative;
+
           span {
             text-decoration: underline;
           }
@@ -144,6 +145,8 @@
       }
 
       .home-add-customer {
+        width: 160px;
+        height: 45px;
         position: fixed;
         bottom: 12%;
         right: 5%;
@@ -153,7 +156,7 @@
         padding: 7px;
         background: $most;
         color: white;
-        border-radius: 20px;
+        border-radius: 25px;
         font-size: 14px;
         padding-left: 20px;
         padding-right: 20px;
