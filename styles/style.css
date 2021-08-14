@@ -384,6 +384,183 @@
 .home .home-wrapper .home-main {
   width: 100%;
   height: 82%;
+  position: relative;
+}
+
+.home .home-wrapper .home-main .home-when-empty {
+  width: 85%;
+  height: auto;
+  background: white;
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 3px 7px rgba(197, 178, 3, 0.603);
+          box-shadow: 0px 3px 7px rgba(197, 178, 3, 0.603);
+  border-radius: 7px;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-first {
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  padding: 10px;
+  background: orange;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6em;
+  position: relative;
+  line-height: 17px;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-first::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: orange;
+  bottom: -17%;
+  left: 10%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-second {
+  padding: 10px;
+  padding-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6em;
+  position: relative;
+  line-height: 17px;
+  font-size: 15px;
+  font-size: 14.7px;
+  padding-right: 0px;
+  padding-bottom: 18px;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-second i {
+  color: orange;
+  font-size: 23px;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-third {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6em;
+  position: relative;
+  line-height: 17px;
+  font-size: 15px;
+  font-size: 14.7px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-third i {
+  color: orange;
+  font-size: 23px;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-fourth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 15px;
+  gap: 0.3em;
+  position: relative;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-fourth::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  bottom: -27%;
+  right: 15%;
+  background: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-bottom: 1px solid rgba(197, 178, 3, 0.603);
+  border-left: 1px solid rgba(197, 178, 3, 0.603);
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-fourth span {
+  text-decoration: underline;
+}
+
+.home .home-wrapper .home-main .home-when-empty .home-when-empty-fourth i {
+  font-size: 23px;
+  border-radius: 4px;
+}
+
+.home .home-wrapper .home-main .home-add-customer {
+  position: fixed;
+  bottom: 12%;
+  right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2em;
+  padding: 7px;
+  background: #b82329;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.home .home-wrapper .home-main .home-add-customer i {
+  font-size: 20px;
 }
 
 .home .home-wrapper .home-footer {

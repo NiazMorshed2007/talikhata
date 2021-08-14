@@ -77,3 +77,12 @@
     }
   }
 }
+
+@mixin whenEmpty {
+  @include flex(row);
+  align-items: center;
+  gap: 0.6em;
+  position: relative;
+  line-height: 17px;
+  font-size: 15px;
+}
