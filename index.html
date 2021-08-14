@@ -96,12 +96,12 @@
           </div>
           <div class="set-code-third">
             <label for="pin">
-              <input id="pinInput" name="pin" type="password" />
+              <input id="pinInput" name="pin" type="password" required />
               <span>পিন দিন</span>
               <i class="material-icons visibility">visibility_off</i>
             </label>
             <label for="re-pin">
-              <input name="re-pin" type="password" />
+              <input name="re-pin" type="password" required />
               <span>পুনরায় পিন দিন</span>
               <i class="material-icons visibility">visibility_off</i>
             </label>
@@ -183,6 +183,24 @@
               <div class="category-add-customer active">কাস্টমার</div>
               <div class="category-add-supplier">সাপ্লায়ার</div>
             </div>
+            <button class="add-from-phonebook">
+              <i class="material-icons">contacts</i>
+              <p>ফোনবুক থেকে যোগ করি</p>
+            </button>
+            <label>
+              <input class="add-customer-supplier-name" type="text" required />
+              <span>কাস্টমারের নাম</span>
+            </label>
+            <label for="number">
+              <input
+                class="add-customer-supplier-number"
+                type="text"
+                onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                inputmode="tel"
+                required
+              />
+              <span>মোবাইল নম্বর</span>
+            </label>
           </div>
         </div>
       </div>

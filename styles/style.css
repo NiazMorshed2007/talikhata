@@ -101,7 +101,7 @@
 }
 
 .wrapper .welcome .welcome-wrapper .welcome-third label input:focus {
-  border-color: #f03030;
+  border: 2px solid #f03030;
 }
 
 .wrapper .welcome .welcome-wrapper .welcome-third label input:focus ~ span {
@@ -120,7 +120,7 @@
 .wrapper .welcome .welcome-wrapper .welcome-third label span {
   position: absolute;
   display: block;
-  color: silver;
+  color: #b1b1b1;
   top: 18%;
   left: 8%;
   pointer-events: none;
@@ -228,7 +228,7 @@
 }
 
 .set-code .set-code-wrapper .set-code-third label input:focus {
-  border-color: #f03030;
+  border: 2px solid #f03030;
 }
 
 .set-code .set-code-wrapper .set-code-third label input:focus ~ span {
@@ -247,7 +247,7 @@
 .set-code .set-code-wrapper .set-code-third label span {
   position: absolute;
   display: block;
-  color: silver;
+  color: #b1b1b1;
   top: 18%;
   left: 8%;
   pointer-events: none;
@@ -671,6 +671,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.7em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-main-first {
@@ -710,6 +714,81 @@
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-main-first .active {
   color: #9c1e22;
   border-bottom: 3px solid #9c1e22;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-from-phonebook {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #b1b1b1;
+  outline: none;
+  background: none;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.4em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-from-phonebook i {
+  font-size: 18px;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label {
+  width: 90%;
+  position: relative;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 17px;
+  border: 1px solid #b1b1b1;
+  border-radius: 7px;
+  outline: none;
+  caret-color: #9c1e22;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label input:focus {
+  border: 2px solid #9c1e22;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label input:focus ~ span {
+  font-size: 12px;
+  -webkit-transform: translateY(-17px);
+          transform: translateY(-17px);
+  color: #9c1e22;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label input:valid ~ span {
+  font-size: 12px;
+  -webkit-transform: translateY(-17px);
+          transform: translateY(-17px);
+  color: #9c1e22;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label span {
+  position: absolute;
+  display: block;
+  color: #b1b1b1;
+  top: 18%;
+  left: 8%;
+  pointer-events: none;
+  font-size: 14px;
+  background: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  top: 21%;
 }
 
 .active {

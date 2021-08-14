@@ -29,6 +29,8 @@
       width: 100%;
       height: 91%;
       @include flex(column);
+      gap: 0.7em;
+      align-items: center;
       .add-customer-supplier-main-first {
         width: 100%;
         height: 8%;
@@ -45,6 +47,53 @@
         .active {
           color: $active;
           border-bottom: 3px solid $active;
+        }
+      }
+      .add-from-phonebook {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid $lightBorder;
+        outline: none;
+        background: none;
+        border-radius: 40px;
+        @include flex(row);
+        gap: 0.4em;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        i {
+          font-size: 18px;
+        }
+      }
+      label {
+        width: 90%;
+        // border: 1px solid orange;
+        position: relative;
+        input {
+          width: 100%;
+          padding: 10px;
+          padding-left: 17px;
+          border: 1px solid $lightBorder;
+          border-radius: 7px;
+          outline: none;
+          caret-color: $active;
+          &:focus {
+            border: 2px solid $active;
+          }
+          &:focus ~ span {
+            font-size: 12px;
+            transform: translateY(-17px);
+            color: $active;
+          }
+        }
+        input:valid ~ span {
+          font-size: 12px;
+          transform: translateY(-17px);
+          color: $active;
+        }
+        span {
+          @include inputSpan;
+          top: 21%;
         }
       }
     }

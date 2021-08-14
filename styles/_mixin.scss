@@ -26,7 +26,7 @@
       outline: none;
       border: 1.5px solid silver;
       &:focus {
-        border-color: $p;
+        border: 2px solid $p;
       }
       &:focus ~ span {
         color: red;
@@ -39,17 +39,21 @@
       }
     }
     span {
-      position: absolute;
-      display: block;
-      color: silver;
-      top: 18%;
-      left: 8%;
-      pointer-events: none;
-      font-size: 14px;
-      background: white;
-      transition: all 0.25s ease;
+      @include inputSpan;
     }
   }
+}
+
+@mixin inputSpan {
+  position: absolute;
+  display: block;
+  color: $lightBorder;
+  top: 18%;
+  left: 8%;
+  pointer-events: none;
+  font-size: 14px;
+  background: white;
+  transition: all 0.25s ease;
 }
 
 @mixin btn {
