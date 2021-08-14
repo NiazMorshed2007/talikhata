@@ -11,6 +11,11 @@ var homeFromCustomerSupplierBtn = document.querySelector(
   ".home-from-customer-supplier"
 );
 var customerSuppBtn = document.querySelector(".home-add-customer");
+
+var customerSupplierCategorys = document.querySelectorAll(
+  ".add-customer-supplier-main-first > div"
+);
+
 // if logged in
 let loggedIn = false;
 // let opened = false;
@@ -19,6 +24,9 @@ helpQuestionWrapper.forEach((e, i) => {
   toggleAnswer(e, i);
 });
 
+customerSupplierCategorys.forEach((e, i) => {
+  selectCategory(e, i);
+});
 // adding event for home section
 
 customerSuppBtn.addEventListener("click", () => {
@@ -41,6 +49,18 @@ function disableBtn(input, btn) {
   } else {
     btn.disabled = false;
   }
+}
+
+function selectCategory(e, i) {
+  e.addEventListener("click", () => {
+    for (let j = 0; j < customerSupplierCategorys.length; j++) {
+      if (j == i) {
+        customerSupplierCategorys[i].classList.add("active");
+      } else {
+        customerSupplierCategorys[j].classList.remove("active");
+      }
+    }
+  });
 }
 
 function btnFunc(e) {
