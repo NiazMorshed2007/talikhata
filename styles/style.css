@@ -752,7 +752,7 @@
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label input {
   width: 100%;
   padding: 10px;
-  padding-left: 17px;
+  padding-left: 32px;
   border: 1px solid #b1b1b1;
   border-radius: 7px;
   outline: none;
@@ -789,6 +789,27 @@
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   top: 21%;
+  left: 12%;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main label i {
+  position: absolute;
+  display: block;
+  top: 23%;
+  left: 3%;
+  font-size: 21px;
+  color: #4d4d4d;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-btn {
+  width: 90%;
+  padding: 10px;
+  position: fixed;
+  bottom: 3%;
+  border-radius: 40px;
+  border: none;
+  background-color: #b82329;
+  color: white;
 }
 
 .active {

@@ -72,7 +72,7 @@
         input {
           width: 100%;
           padding: 10px;
-          padding-left: 17px;
+          padding-left: 32px;
           border: 1px solid $lightBorder;
           border-radius: 7px;
           outline: none;
@@ -94,7 +94,26 @@
         span {
           @include inputSpan;
           top: 21%;
+          left: 12%;
         }
+        i {
+          position: absolute;
+          display: block;
+          top: 23%;
+          left: 3%;
+          font-size: 21px;
+          color: rgb(77, 77, 77);
+        }
+      }
+      .add-customer-supplier-btn {
+        width: 90%;
+        padding: 10px;
+        position: fixed;
+        bottom: 3%;
+        border-radius: 40px;
+        border: none;
+        background-color: $most;
+        color: white;
       }
     }
   }
