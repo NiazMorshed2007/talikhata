@@ -74,7 +74,7 @@
           border-top-left-radius: 7px;
           border-top-right-radius: 7px;
           padding: 10px;
-          background: orange;
+          background: $orangeType;
           color: white;
           @include whenEmpty;
           padding-bottom: 10px;
@@ -84,7 +84,7 @@
             display: block;
             width: 17px;
             height: 17px;
-            background: orange;
+            background: $orangeType;
             bottom: -17%;
             left: 10%;
             transform: rotate(-45deg);
@@ -98,7 +98,7 @@
           padding-right: 0px;
           padding-bottom: 18px;
           i {
-            color: orange;
+            color: $orangeType;
             font-size: 23px;
           }
         }
@@ -109,7 +109,7 @@
           padding-right: 0px;
           padding-bottom: 20px;
           i {
-            color: orange;
+            color: $orangeType;
             font-size: 23px;
           }
         }

@@ -1,0 +1,50 @@
+.add-customer-supplier {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: white;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  .add-customer-supplier-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include flex(column);
+    .add-customer-supplier-header {
+      width: 100%;
+      height: 9%;
+      @include flex(row);
+      align-items: center;
+      background: $pinkType;
+      gap: 0.6em;
+      padding-left: 7px;
+      i {
+        font-size: 22px;
+      }
+    }
+    .add-customer-supplier-main {
+      width: 100%;
+      height: 91%;
+      @include flex(column);
+      .add-customer-supplier-main-first {
+        width: 100%;
+        height: 10%;
+        background: gray;
+        @include flex(row);
+        align-items: center;
+        div {
+          width: 50%;
+          height: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(0%);
+}

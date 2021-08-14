@@ -1,13 +1,16 @@
 // sections
-var homeSection = document.querySelector(".home");
 var helpSection = document.querySelector(".help");
+var customerSupplierSec = document.querySelector(".add-customer-supplier");
 
 var helpQuestionWrapper = document.querySelectorAll(".help-question-wrapper");
 var helpQuestionHeading = document.querySelectorAll(".help-question-heading");
 var showAnswerArrow = document.querySelectorAll(".help-show-answer-arrow");
 // declare
-var helpBtn = document.querySelector(".second-home-header");
 var homeFromHelpBtn = document.querySelector(".home-from-help");
+var homeFromCustomerSupplierBtn = document.querySelector(
+  ".home-from-customer-supplier"
+);
+var customerSuppBtn = document.querySelector(".home-add-customer");
 // if logged in
 let loggedIn = false;
 // let opened = false;
@@ -17,12 +20,18 @@ helpQuestionWrapper.forEach((e, i) => {
 });
 
 // adding event for home section
-helpBtn.addEventListener("click", () => {
-  activeSection(helpSection);
+
+customerSuppBtn.addEventListener("click", () => {
+  activeSection(customerSupplierSec);
 });
 
+// unactivate sections
 homeFromHelpBtn.addEventListener("click", () => {
   unactiveSection(helpSection);
+});
+
+homeFromCustomerSupplierBtn.addEventListener("click", () => {
+  unactiveSection(customerSupplierSec);
 });
 
 // writing functions
