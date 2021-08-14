@@ -31,14 +31,20 @@
       @include flex(column);
       .add-customer-supplier-main-first {
         width: 100%;
-        height: 10%;
-        background: gray;
+        height: 8%;
+        background: $silverType;
         @include flex(row);
         align-items: center;
         div {
           width: 50%;
           height: 100%;
-          text-align: center;
+          @include flex(row);
+          align-items: center;
+          justify-content: center;
+        }
+        .active {
+          color: $active;
+          border-bottom: 3px solid $active;
         }
       }
     }

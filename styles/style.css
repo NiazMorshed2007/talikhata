@@ -675,8 +675,8 @@
 
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-main-first {
   width: 100%;
-  height: 10%;
-  background: gray;
+  height: 8%;
+  background: #f4f3f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,7 +692,24 @@
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-main-first div {
   width: 50%;
   height: 100%;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-main-first .active {
+  color: #9c1e22;
+  border-bottom: 3px solid #9c1e22;
 }
 
 .active {
