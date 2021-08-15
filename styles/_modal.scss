@@ -15,18 +15,19 @@
     transform: translateX(-100%);
     transition: all 0.4s ease-out;
     @include flex(column);
-    padding: 15px 0px 15px 10px;
+    padding: 10px 0px 15px 10px;
     .nav-main {
       width: 100%;
-      height: 85%;
-      //   background: green;
+      height: 90%;
+      overflow: hidden;
+      overflow-y: scroll;
       .nav-inner-main {
+        overflow-y: scroll;
         .nav-inner-main-first {
           padding: 10px;
           @include flex(row);
           gap: 1em;
           align-items: center;
-          //   background: chocolate;
           .nav-first-logo-wrap {
             width: 40px;
             height: 40px;
@@ -48,13 +49,57 @@
               color: rgb(153, 153, 153);
             }
           }
+          i {
+            margin-left: 10px;
+            font-size: 20px;
+          }
+        }
+        .nav-inner-main-second {
+          padding-left: 9px;
+          width: 70%;
+          padding-bottom: 10px;
+          ul {
+            list-style-type: none;
+            li {
+              margin: 5px;
+              padding: 4px;
+              border-bottom: 1px solid silver;
+              font-size: 14px;
+            }
+          }
+          p {
+            font-size: 12px;
+            color: $most;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+          }
         }
       }
     }
     .nav-footer {
       width: 100%;
-      height: 15%;
-      background: hotpink;
+      height: 10%;
+      @include flex(row);
+      align-items: center;
+      .nav-footer1 {
+        width: 25%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .nav-footer2 {
+        width: 75%;
+        height: 100%;
+        text-align: right;
+        padding-top: 14px;
+        font-size: 12px;
+        padding-right: 7px;
+        color: rgb(160, 160, 160);
+        // line-height: 50%;
+      }
     }
   }
 }
