@@ -1,3 +1,11 @@
-var headerName = document.querySelector(".business-name");
+var businessName = document.querySelectorAll(".business-name");
+var number = document.querySelectorAll(".number");
+// var
 
-headerName.innerHTML = localStorage.getItem("name");
+businessName.forEach((e) => {
+  e.innerHTML = localStorage.getItem("name");
+});
+
+number.forEach((e) => {
+  e.innerHTML = localStorage.getItem("number");
+});

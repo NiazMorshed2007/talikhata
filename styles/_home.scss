@@ -58,6 +58,55 @@
       width: 100%;
       height: 82%;
       position: relative;
+
+      .home-main-first {
+        width: 100%;
+        height: 25%;
+        background: rgba($pinkType, $alpha: 0.6);
+        border-bottom-left-radius: 17px;
+        border-bottom-right-radius: 17px;
+        @include flex(column);
+        gap: 0.5em;
+        align-items: center;
+        padding: 15px 0px 10px 0px;
+        .home-main-first-in-first {
+          width: 80%;
+          height: 50%;
+          @include flex(row);
+          align-items: center;
+          justify-content: space-between;
+          div {
+            text-align: center;
+            width: 50%;
+            h4 {
+              line-height: 16px;
+              font-size: 19px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+          .total-debt-for-customer-div {
+            h4 {
+              color: $most;
+            }
+          }
+        }
+        .home-main-first-in-second {
+          height: 31px;
+          border: 1px solid rgb(255, 208, 216);
+          background: white;
+          @include flex(row);
+          gap: 0.7em;
+          align-items: center;
+          font-size: 12px;
+          padding-left: 7px;
+          padding-right: 7px;
+          border-radius: 7px;
+          box-shadow: 0px 1px 4px $pinkType;
+        }
+      }
+
       .home-when-empty {
         width: 85%;
         height: 240px;
@@ -69,6 +118,7 @@
         transform: translate(-50%, -50%);
         box-shadow: 0px 3px 7px rgba(197, 178, 3, 0.603);
         border-radius: 7px;
+        display: none; //when empty------------------------------------------------------------------
         &::after {
           content: "";
           position: absolute;

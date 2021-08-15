@@ -5,7 +5,15 @@ function nameAndNumber() {
 
   localStorage.setItem("name", companyName);
   localStorage.setItem("number", mobileNumber);
-  headerName.innerHTML = localStorage.getItem("name");
+  // .innerHTML = localStorage.getItem("name");
+  businessName.forEach((e) => {
+    e.innerHTML = localStorage.getItem("name");
+  });
+
+  number.forEach((e) => {
+    e.innerHTML = localStorage.getItem("number");
+  });
+
   console.log(localStorage);
 }
 
@@ -29,7 +37,4 @@ function goHomeDirect() {
   } else {
     console.log("not-logged");
   }
-  // logged();
-  // console.log(localStorage.getItem("logged"));
 }
-//
