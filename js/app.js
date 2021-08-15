@@ -12,7 +12,7 @@ var homeFromCustomerSupplierBtn = document.querySelector(
 );
 var customerSuppBtn = document.querySelector(".home-add-customer");
 
-var customerSupplierCategorys = document.querySelectorAll(
+var customerSupplierCategories = document.querySelectorAll(
   ".add-customer-supplier-main-first > div"
 );
 
@@ -24,7 +24,7 @@ helpQuestionWrapper.forEach((e, i) => {
   toggleAnswer(e, i);
 });
 
-customerSupplierCategorys.forEach((e, i) => {
+customerSupplierCategories.forEach((e, i) => {
   selectCategory(e, i);
 });
 // adding event for home section
@@ -53,11 +53,11 @@ function disableBtn(input, btn) {
 
 function selectCategory(e, i) {
   e.addEventListener("click", () => {
-    for (let j = 0; j < customerSupplierCategorys.length; j++) {
+    for (let j = 0; j < customerSupplierCategories.length; j++) {
       if (j == i) {
-        customerSupplierCategorys[i].classList.add("active");
+        customerSupplierCategories[i].classList.add("active");
       } else {
-        customerSupplierCategorys[j].classList.remove("active");
+        customerSupplierCategories[j].classList.remove("active");
       }
     }
   });

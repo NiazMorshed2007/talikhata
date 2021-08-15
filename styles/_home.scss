@@ -60,7 +60,7 @@
       position: relative;
       .home-when-empty {
         width: 85%;
-        height: 60%;
+        height: 240px;
         background: white;
         position: absolute;
         display: block;
@@ -132,8 +132,6 @@
           justify-content: center;
           padding-bottom: 15px;
           gap: 0.3em;
-          // position: relative;
-
           span {
             text-decoration: underline;
           }
