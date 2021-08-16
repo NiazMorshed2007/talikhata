@@ -466,6 +466,154 @@
           box-shadow: 0px 1px 4px #fff0f1;
 }
 
+.home .home-wrapper .home-main .home-main-second {
+  width: 100%;
+  height: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6em;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-first {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 8px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-first div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-first div i {
+  font-size: 19px;
+  color: #868686;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-first .home-main-second-first1 {
+  position: relative;
+  width: 67%;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-first .home-main-second-first1 .search {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  outline: none;
+  background: #f4f3f3;
+  border-radius: 14px;
+  caret-color: #8b1014;
+  padding-left: 37px;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-first .home-main-second-first1 i {
+  position: absolute;
+  display: block;
+  top: 30%;
+  left: 5.5%;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second div p {
+  line-height: 14px;
+  font-size: 12px;
+  color: #868686;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second i {
+  font-size: 19px;
+  color: #8b1014;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second .home-main-second-second1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second .home-main-second-second2 {
+  background-color: #fff0f1;
+  padding: 4px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second .home-main-second-second3 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px 7px 7px 7px;
+  border-radius: 14px;
+  background-color: #fff0f1;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second .home-main-second-second3 p {
+  color: #8b1014;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second .home-main-second-second3 i {
+  font-size: 15px;
+}
+
+.home .home-wrapper .home-main .home-main-second .home-main-second-second .home-main-second-second4 p > :nth-child(1) {
+  color: #8b1014;
+}
+
 .home .home-wrapper .home-main .home-when-empty {
   width: 85%;
   height: 240px;
