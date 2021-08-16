@@ -8,7 +8,13 @@ businessName.forEach((e) => {
   e.innerHTML = localStorage.getItem("name");
 });
 
-logoTxtFunc();
+function lgF() {
+  var exist = localStorage.getItem("name")
+    ? logoTxtFunc()
+    : console.log("not-stored");
+}
+
+lgF();
 
 number.forEach((e) => {
   e.innerHTML = localStorage.getItem("number");

@@ -26,7 +26,7 @@ function logoTxtFunc() {
   if (wordCount < 2) {
     logoTxt.innerHTML = name.charAt(0) + name.charAt(1);
   } else {
-    var matches = name.match(/\b(\w)/g); // ['J','S','O','N']
+    var matches = name.match(/\b(\w)/g);
     var acronym = matches.join("");
     logoTxt.innerHTML = acronym;
   }
