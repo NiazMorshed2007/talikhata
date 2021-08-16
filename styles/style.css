@@ -390,7 +390,7 @@
 
 .home .home-wrapper .home-main .home-main-first {
   width: 100%;
-  height: 25%;
+  padding: 20px;
   background: rgba(255, 240, 241, 0.6);
   border-bottom-left-radius: 17px;
   border-bottom-right-radius: 17px;
@@ -469,7 +469,6 @@
 
 .home .home-wrapper .home-main .home-main-second {
   width: 100%;
-  height: 17%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,6 +477,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.6em;
+  padding-bottom: 10px;
 }
 
 .home .home-wrapper .home-main .home-main-second .home-main-second-first {
@@ -913,6 +913,8 @@
 
 .home .home-wrapper .home-footer {
   width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: #c4161c;
   display: -webkit-box;
   display: -ms-flexbox;
