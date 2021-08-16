@@ -771,6 +771,10 @@
   font-weight: 700;
 }
 
+.modal .nav .nav-main .nav-inner-main .nav-inner-main-first .nav-first-logo-wrap .logo-when-no-img {
+  text-transform: uppercase;
+}
+
 .modal .nav .nav-main .nav-inner-main .nav-inner-main-first .nav-first-information {
   padding-top: 7px;
 }

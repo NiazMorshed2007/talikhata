@@ -17,6 +17,21 @@ function nameAndNumber() {
   console.log(localStorage);
 }
 
+function logoTxtFunc() {
+  var name = localStorage.getItem("name")
+    ? localStorage.getItem("name")
+    : nameInput.value;
+  var wordCount = name.match(/(\w+)/g).length;
+
+  if (wordCount < 2) {
+    logoTxt.innerHTML = name.charAt(0) + name.charAt(1);
+  } else {
+    var matches = name.match(/\b(\w)/g); // ['J','S','O','N']
+    var acronym = matches.join("");
+    logoTxt.innerHTML = acronym;
+  }
+}
+
 function savePin() {
   var pin = pinInput.value;
 

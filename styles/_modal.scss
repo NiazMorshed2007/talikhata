@@ -37,6 +37,9 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
+            .logo-when-no-img {
+              text-transform: uppercase;
+            }
           }
           .nav-first-information {
             padding-top: 7px;
