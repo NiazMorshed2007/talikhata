@@ -308,13 +308,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
 }
 
 .home .home-wrapper .home-header {
   width: 100%;
   height: 9%;
-  padding: 12px;
   background: #fff0f1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,8 +389,7 @@
 
 .home .home-wrapper .home-main .home-main-first {
   width: 100%;
-  height: 19%;
-  padding: 20px;
+  height: 25%;
   background: rgba(255, 240, 241, 0.6);
   border-bottom-left-radius: 17px;
   border-bottom-right-radius: 17px;
@@ -471,7 +468,7 @@
 
 .home .home-wrapper .home-main .home-main-second {
   width: 100%;
-  height: 19%;
+  height: 17%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,7 +477,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.6em;
-  padding-bottom: 10px;
 }
 
 .home .home-wrapper .home-main .home-main-second .home-main-second-first {
@@ -620,7 +616,7 @@
 
 .home .home-wrapper .home-main .home-main-third {
   width: 100%;
-  height: 62%;
+  height: 58%;
   padding-bottom: 25%;
   overflow: hidden;
   overflow-y: scroll;
@@ -723,7 +719,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1em;
 }
 
 .home .home-wrapper .home-main .home-main-third .home-list-wrapper .list .list-third p {
@@ -733,7 +728,7 @@
 
 .home .home-wrapper .home-main .home-main-third .home-list-wrapper .list .list-third i {
   color: #868686;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .home .home-wrapper .home-main .home-when-empty {
