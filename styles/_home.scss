@@ -15,7 +15,8 @@
     position: relative;
     .home-header {
       width: 100%;
-      height: 9%;
+      // height: 9%;
+      padding: 12px;
       background: $pinkType;
       @include flex(row);
       align-items: center;
@@ -366,7 +367,7 @@
     }
     .home-footer {
       width: 100%;
-      height: 9%;
+      // height: 9%;
       background-color: $most;
       @include flex(row);
       align-items: center;

@@ -313,7 +313,7 @@
 
 .home .home-wrapper .home-header {
   width: 100%;
-  height: 9%;
+  padding: 12px;
   background: #fff0f1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -913,7 +913,6 @@
 
 .home .home-wrapper .home-footer {
   width: 100%;
-  height: 9%;
   background-color: #c4161c;
   display: -webkit-box;
   display: -ms-flexbox;
