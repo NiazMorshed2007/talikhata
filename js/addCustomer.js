@@ -13,7 +13,6 @@ var customerSuppBtn = document.querySelector(".home-add-customer");
 
 var homeWhenEmpty = document.querySelector(".home-when-empty");
 var homeMainExists = document.querySelector(".home-main-when-exists");
-var homeListWrapper = document.querySelector(".home-list-wrapper");
 var homeLists = document.querySelectorAll(".home-list-wrapper > .list");
 
 // var logoName = document.querySelector(".logo-name");
@@ -33,7 +32,7 @@ homeFromCustomerSupplierBtn.addEventListener("click", () => {
 });
 // console.log(homeLists.length);
 addCustomerSupBtn.addEventListener("click", createList);
-// addCustomerSupBtn.addEventListener("click", saveList);
+addCustomerSupBtn.addEventListener("click", saveList);
 
 addCustomerSupBtn.addEventListener("click", () => {
   emptyInput(addCusSupInputAll);
@@ -109,24 +108,24 @@ function createList() {
   homeListWrapper.insertBefore(list, homeListWrapper.firstChild);
 }
 
-let c = 0;
-
-arr = new Array();
-
 function saveList() {
-  c++;
-  var customerName;
-  var supplierName;
+  category();
+  var type = customer ? "customer" : "supplier";
 
   customerName = addCusSupNameInput.value;
+  localStorage.getItem("lists") === null
+    ? localStorage.setItem("lists", "[]")
+    : console.log("not stored lists yet");
 
   obj = new Object();
-  obj.push();
+  obj["type"] = type;
+  obj["name"] = addCusSupNameInput.value;
+  obj["number"] = addCusSupNumInput.value;
+  obj["debt"] = addCusSupDbtInput.value;
 
-  // arr.push(customerName);
-  // console.log(customerName);
-  // console.log(arr);
-  // localStorage.setItem(`customer${c}`, JSON.stringify(arr));
+  var old_data = JSON.parse(localStorage.getItem("lists"));
+  old_data.push(obj);
+  localStorage.setItem("lists", JSON.stringify(old_data));
 }
 
 function homeAppearDisappear() {
@@ -139,9 +138,7 @@ function homeAppearDisappear() {
   }
 }
 
-// setInterval(() => {
 homeAppearDisappear();
-// }, 1000);
 
 function logoTxtForClient(txt) {
   var name = addCusSupNameInput.value;

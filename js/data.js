@@ -1,3 +1,5 @@
+var homeListWrapper = document.querySelector(".home-list-wrapper");
+
 //set local storage
 function nameAndNumber() {
   var companyName = nameInput.value;
