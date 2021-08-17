@@ -17,8 +17,8 @@
       // height: 9%;
       padding: 12px;
       padding-left: 5px;
-      // background: $pinkType;
-      background-color: green;
+      background: $pinkType;
+      // background-color: green;
       @include flex(row);
       align-items: center;
       .first-home-header {
@@ -251,6 +251,13 @@
                   width: 62%;
                   height: 100%;
                   @include flex(column);
+                  gap: 0.4em;
+                  .name {
+                    line-height: 14px;
+                  }
+                  .sub-name {
+                    font-size: 12px;
+                  }
                 }
                 .list-third {
                   width: 19%;

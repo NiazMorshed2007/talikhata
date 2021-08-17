@@ -5,14 +5,32 @@ var addCusSupInputAll = document.querySelectorAll(
 var addCusSupNameInput = document.querySelector(".add-customer-supplier-name");
 var addCusSupNumInput = document.querySelector(".add-customer-supplier-number");
 
+var homeFromCustomerSupplierBtn = document.querySelector(
+  ".home-from-customer-supplier"
+);
+var customerSuppBtn = document.querySelector(".home-add-customer");
+
 var homeWhenEmpty = document.querySelector(".home-when-empty");
 var homeMainExists = document.querySelector(".home-main-when-exists");
 var homeListWrapper = document.querySelector(".home-list-wrapper");
 var homeLists = document.querySelectorAll(".home-list-wrapper > .list");
 
+customerSupplierCategories.forEach((e, i) => {
+  selectCategory(e, i);
+  e.addEventListener("click", () => {
+    categoryText(clientCategory);
+  });
+});
+
+customerSuppBtn.addEventListener("click", () => {
+  activeSection(customerSupplierSec);
+});
+homeFromCustomerSupplierBtn.addEventListener("click", () => {
+  unactiveSection(customerSupplierSec);
+});
 // console.log(homeLists.length);
 addCustomerSupBtn.addEventListener("click", createList);
-addCustomerSupBtn.addEventListener("click", saveList);
+// addCustomerSupBtn.addEventListener("click", saveList);
 
 addCustomerSupBtn.addEventListener("click", () => {
   emptyInput(addCusSupInputAll);
@@ -36,6 +54,8 @@ setInterval(() => {
 }, 1000);
 
 function createList() {
+  category();
+
   var list = document.createElement("div");
   list.setAttribute("class", "list");
 
@@ -54,6 +74,12 @@ function createList() {
   name.setAttribute("class", "name");
   name.innerHTML = addCusSupNameInput.value;
   list2.appendChild(name);
+  if (supplier) {
+    var subName = document.createElement("div");
+    subName.setAttribute("class", "sub-name");
+    subName.innerHTML = "সাপ্লায়ার";
+    list2.appendChild(subName);
+  }
 
   var list3 = document.createElement("div");
   list3.setAttribute("class", "list-third");
@@ -74,18 +100,22 @@ function createList() {
 
 let c = 0;
 
+arr = new Array();
+
 function saveList() {
   c++;
   var customerName;
   var supplierName;
 
-  arr = new Array();
-
   customerName = addCusSupNameInput.value;
-  arr.push(customerName);
-  console.log(customerName);
-  console.log(arr);
-  localStorage.setItem(`customer${c}`, JSON.stringify(arr));
+
+  obj = new Object();
+  obj.push();
+
+  // arr.push(customerName);
+  // console.log(customerName);
+  // console.log(arr);
+  // localStorage.setItem(`customer${c}`, JSON.stringify(arr));
 }
 
 function homeAppearDisappear() {

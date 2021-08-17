@@ -314,7 +314,7 @@
   width: 100%;
   padding: 12px;
   padding-left: 5px;
-  background-color: green;
+  background: #fff0f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -714,6 +714,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.4em;
+}
+
+.home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-second .name {
+  line-height: 14px;
+}
+
+.home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-second .sub-name {
+  font-size: 12px;
 }
 
 .home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-third {

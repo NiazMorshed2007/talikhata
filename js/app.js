@@ -1,36 +1,28 @@
-// sections
-var helpSection = document.querySelector(".help");
+// some global
+
+// customer supplier --------------------------------------------------------
+var customerSupplierCategories = document.querySelectorAll(
+  ".add-customer-supplier-main-first > div"
+);
+var clientCategory = document.querySelector(".client-category");
 var customerSupplierSec = document.querySelector(".add-customer-supplier");
+let customer = false;
+let supplier = false;
+
+// help --------------------------------------------------------------------
+var helpSection = document.querySelector(".help");
 
 var helpQuestionWrapper = document.querySelectorAll(".help-question-wrapper");
 var helpQuestionHeading = document.querySelectorAll(".help-question-heading");
 var showAnswerArrow = document.querySelectorAll(".help-show-answer-arrow");
 // declare
 var homeFromHelpBtn = document.querySelector(".home-from-help");
-var homeFromCustomerSupplierBtn = document.querySelector(
-  ".home-from-customer-supplier"
-);
-var customerSuppBtn = document.querySelector(".home-add-customer");
 
-var customerSupplierCategories = document.querySelectorAll(
-  ".add-customer-supplier-main-first > div"
-);
-
-// if logged in
 let loggedIn = false;
-// let opened = false;
 
+// help events
 helpQuestionWrapper.forEach((e, i) => {
   toggleAnswer(e, i);
-});
-
-customerSupplierCategories.forEach((e, i) => {
-  selectCategory(e, i);
-});
-// adding event for home section
-
-customerSuppBtn.addEventListener("click", () => {
-  activeSection(customerSupplierSec);
 });
 
 // unactivate sections
@@ -38,11 +30,30 @@ homeFromHelpBtn.addEventListener("click", () => {
   unactiveSection(helpSection);
 });
 
-homeFromCustomerSupplierBtn.addEventListener("click", () => {
-  unactiveSection(customerSupplierSec);
-});
+// -----------------------------------------------------------------------
 
 // writing functions
+function category() {
+  if (customerSupplierCategories[0].classList.contains("active")) {
+    customer = true;
+    supplier = false;
+  } else {
+    supplier = true;
+    customer = false;
+  }
+  console.log(customer);
+  // console.log(supplier);
+}
+
+function categoryText(e) {
+  category();
+  customer
+    ? (e.textContent = "কাস্টমারের নাম")
+    : (e.textContent = "সাপ্লায়ারের নাম");
+}
+
+categoryText(clientCategory);
+
 function disableBtn(input, btn) {
   if (input[0].value === "" || input[1].value === "") {
     btn.disabled = true;
