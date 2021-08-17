@@ -1716,5 +1716,6 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: "Hind Siliguri", sans-serif;
+  min-height: 900px;
 }
 /*# sourceMappingURL=style.css.map */
