@@ -14,7 +14,9 @@ var numberInput = document.getElementById("number");
 // adding event listeners
 welcomeBtn.addEventListener("click", nameAndNumber);
 welcomeBtn.addEventListener("click", logoTxtFunc);
-welcomeBtn.addEventListener("click", emptyInput);
+welcomeBtn.addEventListener("click", () => {
+  emptyInput(welcomeInput);
+});
 welcomeBtn.addEventListener("click", () => {
   activeSection(setCodeSection);
 });

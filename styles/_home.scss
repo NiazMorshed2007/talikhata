@@ -58,198 +58,204 @@
       width: 100%;
       height: 82%;
       position: relative;
+      // display: none; //-----------------------------
 
-      .home-main-first {
-        width: 100%;
-        height: 25%;
-        background: rgba($pinkType, $alpha: 0.6);
-        border-bottom-left-radius: 17px;
-        border-bottom-right-radius: 17px;
-        @include flex(column);
-        gap: 0.5em;
-        align-items: center;
-        padding: 15px 0px 10px 0px;
-        .home-main-first-in-first {
-          width: 80%;
-          height: 50%;
-          @include flex(row);
-          align-items: center;
-          justify-content: space-between;
-          div {
-            text-align: center;
-            width: 50%;
-            h4 {
-              line-height: 16px;
-              font-size: 19px;
-            }
-            p {
-              font-size: 12px;
-            }
-          }
-          .total-debt-for-customer-div {
-            h4 {
-              color: $most;
-            }
-          }
-        }
-        .home-main-first-in-second {
-          height: 31px;
-          border: 1px solid rgb(255, 208, 216);
-          background: white;
-          @include flex(row);
-          gap: 0.7em;
-          align-items: center;
-          font-size: 12px;
-          padding-left: 7px;
-          padding-right: 7px;
-          border-radius: 7px;
-          box-shadow: 0px 1px 4px $pinkType;
-        }
-      }
-
-      .home-main-second {
-        width: 100%;
-        height: 17%;
-        @include flex(column);
-        gap: 0.6em;
-        .home-main-second-first {
+      .home-main-when-exists {
+        opacity: 0;
+        visibility: hidden;
+        .home-main-first {
           width: 100%;
-          height: 50%;
-          @include flex(row);
-          margin-top: 8px;
-          justify-content: space-evenly;
-          div {
-            @include flex(row);
-            align-items: center;
-            i {
-              font-size: 19px;
-              color: $darkSilver;
-            }
-          }
-          .home-main-second-first1 {
-            position: relative;
-            width: 67%;
-            .search {
-              width: 100%;
-              padding: 7px;
-              border: none;
-              outline: none;
-              background: $silverType;
-              border-radius: 14px;
-              caret-color: $active;
-              padding-left: 37px;
-            }
-            i {
-              position: absolute;
-              display: block;
-              top: 30%;
-              left: 5.5%;
-            }
-          }
-        }
-        .home-main-second-second {
-          width: 100%;
-          height: 50%;
-          @include flex(row);
-          align-items: center;
-          justify-content: space-evenly;
-          div {
-            @include flex(row);
-            p {
-              line-height: 14px;
-              font-size: 12px;
-              color: $darkSilver;
-            }
-          }
-          i {
-            font-size: 19px;
-            color: $active;
-          }
-          .home-main-second-second1 {
-            @include flex(column);
-            width: 25%;
-          }
-          .home-main-second-second2 {
-            background-color: $pinkType;
-            padding: 4px;
-            border-radius: 50%;
-            font-size: 14px;
-          }
-          .home-main-second-second3 {
-            align-items: center;
-            padding: 7px 7px 7px 7px;
-            border-radius: 14px;
-            background-color: $pinkType;
-            p {
-              color: $active;
-            }
-            i {
-              font-size: 15px;
-            }
-          }
-          .home-main-second-second4 {
-            p {
-              & > :nth-child(1) {
-                color: $active;
-              }
-            }
-          }
-        }
-      }
-
-      .home-main-third {
-        width: 100%;
-        height: 58%;
-        padding-bottom: 25%;
-        overflow: hidden;
-        overflow-y: scroll;
-        .home-list-wrapper {
+          height: 25%;
+          background: rgba($pinkType, $alpha: 0.6);
+          border-bottom-left-radius: 17px;
+          border-bottom-right-radius: 17px;
           @include flex(column);
+          gap: 0.5em;
           align-items: center;
-          .list {
-            width: 85%;
-            padding: 12px;
-            padding-left: 0px;
+          padding: 15px 0px 10px 0px;
+          .home-main-first-in-first {
+            width: 80%;
+            height: 50%;
             @include flex(row);
             align-items: center;
             justify-content: space-between;
-            border-bottom: dashed;
-            border-width: 1.5px;
-            border-color: $darkSilver;
-            .list-first {
-              width: 19%;
-              @include flex(row);
-              align-items: center;
-              gap: 1em;
-              .list-logo {
-                width: 38px;
-                height: 38px;
-                border-radius: 50%;
-                background: orange;
-                @include flex(row);
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-weight: 800;
+            div {
+              text-align: center;
+              width: 50%;
+              h4 {
+                line-height: 16px;
+                font-size: 19px;
+              }
+              p {
+                font-size: 12px;
               }
             }
-            .list-second {
-              width: 62%;
-              height: 100%;
-              @include flex(column);
+            .total-debt-for-customer-div {
+              h4 {
+                color: $most;
+              }
             }
-            .list-third {
-              width: 19%;
-              height: 100%;
+          }
+          .home-main-first-in-second {
+            height: 31px;
+            border: 1px solid rgb(255, 208, 216);
+            background: white;
+            @include flex(row);
+            gap: 0.7em;
+            align-items: center;
+            font-size: 12px;
+            padding-left: 7px;
+            padding-right: 7px;
+            border-radius: 7px;
+            box-shadow: 0px 1px 4px $pinkType;
+          }
+        }
+
+        .home-main-second {
+          width: 100%;
+          height: 17%;
+          @include flex(column);
+          gap: 0.6em;
+          .home-main-second-first {
+            width: 100%;
+            height: 50%;
+            @include flex(row);
+            margin-top: 8px;
+            justify-content: space-evenly;
+            div {
               @include flex(row);
               align-items: center;
-              p {
-                color: $most;
-                font-size: 14px;
+              i {
+                font-size: 19px;
+                color: $darkSilver;
+              }
+            }
+            .home-main-second-first1 {
+              position: relative;
+              width: 67%;
+              .search {
+                width: 100%;
+                padding: 7px;
+                border: none;
+                outline: none;
+                background: $silverType;
+                border-radius: 14px;
+                caret-color: $active;
+                padding-left: 37px;
               }
               i {
+                position: absolute;
+                display: block;
+                top: 30%;
+                left: 5.5%;
+              }
+            }
+          }
+          .home-main-second-second {
+            width: 100%;
+            height: 50%;
+            @include flex(row);
+            align-items: center;
+            justify-content: space-evenly;
+            div {
+              @include flex(row);
+              p {
+                line-height: 14px;
+                font-size: 12px;
                 color: $darkSilver;
-                font-size: 14px;
+              }
+            }
+            i {
+              font-size: 19px;
+              color: $active;
+            }
+            .home-main-second-second1 {
+              @include flex(column);
+              width: 25%;
+            }
+            .home-main-second-second2 {
+              background-color: $pinkType;
+              padding: 4px;
+              border-radius: 50%;
+              font-size: 14px;
+            }
+            .home-main-second-second3 {
+              align-items: center;
+              padding: 7px 7px 7px 7px;
+              border-radius: 14px;
+              background-color: $pinkType;
+              p {
+                color: $active;
+              }
+              i {
+                font-size: 15px;
+              }
+            }
+            .home-main-second-second4 {
+              p {
+                & > :nth-child(1) {
+                  color: $active;
+                }
+              }
+            }
+          }
+        }
+
+        .home-main-third {
+          width: 100%;
+          height: 58%;
+          padding-bottom: 25%;
+          overflow: hidden;
+          overflow-y: scroll;
+          .home-list-wrapper {
+            @include flex(column);
+            align-items: center;
+            .list {
+              width: 85%;
+              padding: 12px;
+              padding-left: 0px;
+              @include flex(row);
+              align-items: center;
+              justify-content: space-between;
+              border-bottom: dashed;
+              border-width: 1.5px;
+              border-color: $darkSilver;
+              .list-first {
+                width: 19%;
+                @include flex(row);
+                align-items: center;
+                gap: 1em;
+                .list-logo {
+                  width: 38px;
+                  height: 38px;
+                  border-radius: 50%;
+                  background: orange;
+                  @include flex(row);
+                  align-items: center;
+                  justify-content: center;
+                  color: white;
+                  font-weight: 800;
+                }
+              }
+              .list-second {
+                width: 62%;
+                height: 100%;
+                @include flex(column);
+              }
+              .list-third {
+                width: 19%;
+                height: 100%;
+                @include flex(row);
+                gap: 1em;
+                align-items: center;
+                p {
+                  color: $most;
+                  font-size: 14px;
+                }
+                i {
+                  color: $darkSilver;
+                  font-size: 14px;
+                }
               }
             }
           }
@@ -257,6 +263,8 @@
       }
 
       .home-when-empty {
+        opacity: 0;
+        visibility: hidden;
         width: 85%;
         height: 240px;
         background: white;
@@ -267,7 +275,6 @@
         transform: translate(-50%, -50%);
         box-shadow: 0px 3px 7px rgba(197, 178, 3, 0.603);
         border-radius: 7px;
-        display: none; //when empty------------------------------------------------------------------
         &::after {
           content: "";
           position: absolute;
@@ -339,6 +346,11 @@
             border-radius: 4px;
           }
         }
+      }
+
+      .active {
+        opacity: 1;
+        visibility: visible;
       }
 
       .home-add-customer {

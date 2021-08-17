@@ -17,7 +17,7 @@ function nameAndNumber() {
   console.log(localStorage);
 }
 
-function logoTxtFunc() {
+function logoTxtFunc(txt) {
   var name = localStorage.getItem("name")
     ? localStorage.getItem("name")
     : nameInput.value;

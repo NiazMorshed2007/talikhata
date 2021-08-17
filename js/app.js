@@ -79,8 +79,8 @@ function checkPin(input, btn) {
   }
 }
 
-function emptyInput() {
-  welcomeInput.forEach((e) => {
+function emptyInput(input) {
+  input.forEach((e) => {
     e.value = "";
   });
 }
