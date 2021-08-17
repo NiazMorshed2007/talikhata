@@ -376,6 +376,16 @@
               <span>মোবাইল নম্বর</span>
               <i class="material-icons">phone</i>
             </label>
+            <label for="debt">
+              <input
+                class="add-cus-sup-debt-input"
+                type="text"
+                onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                required
+              />
+              <span>পূর্বের বাকি (জের)</span>
+              <i class="material-icons">attach_money</i>
+            </label>
             <button
               id="add-customer-supplier-btn"
               class="add-customer-supplier-btn"

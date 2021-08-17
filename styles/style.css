@@ -752,9 +752,13 @@
           align-items: center;
 }
 
-.home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-third p {
+.home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-third h4 {
   color: #c4161c;
   font-size: 14px;
+}
+
+.home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-third .black-txt {
+  color: black;
 }
 
 .home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-third i {

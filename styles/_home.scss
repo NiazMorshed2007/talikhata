@@ -282,9 +282,12 @@
                   @include flex(row);
                   gap: 1em;
                   align-items: center;
-                  p {
+                  h4 {
                     color: $most;
                     font-size: 14px;
+                  }
+                  .black-txt {
+                    color: black;
                   }
                   i {
                     color: $darkSilver;

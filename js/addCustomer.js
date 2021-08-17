@@ -4,6 +4,7 @@ var addCusSupInputAll = document.querySelectorAll(
 );
 var addCusSupNameInput = document.querySelector(".add-customer-supplier-name");
 var addCusSupNumInput = document.querySelector(".add-customer-supplier-number");
+var addCusSupDbtInput = document.querySelector(".add-cus-sup-debt-input");
 
 var homeFromCustomerSupplierBtn = document.querySelector(
   ".home-from-customer-supplier"
@@ -88,9 +89,14 @@ function createList() {
 
   var list3 = document.createElement("div");
   list3.setAttribute("class", "list-third");
-  var p = document.createElement("p");
-  p.innerHTML = "192.00";
-  list3.appendChild(p);
+  var h4 = document.createElement("h4");
+  var dbt = addCusSupDbtInput.value === "" ? 0 : addCusSupDbtInput.value;
+  // var decimalDbt = dbt.toFixed(2);
+  h4.innerHTML = dbt + ".00";
+  if (addCusSupDbtInput.value === "" || supplier) {
+    h4.setAttribute("class", "black-txt");
+  }
+  list3.appendChild(h4);
   var i = document.createElement("i");
   i.setAttribute("class", "material-icons");
   i.innerHTML = "keyboard_arrow_right";
