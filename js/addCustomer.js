@@ -12,9 +12,14 @@ var homeLists = document.querySelectorAll(".home-list-wrapper > .list");
 
 // console.log(homeLists.length);
 addCustomerSupBtn.addEventListener("click", createList);
+addCustomerSupBtn.addEventListener("click", saveList);
+
 addCustomerSupBtn.addEventListener("click", () => {
   emptyInput(addCusSupInputAll);
+  activeSection(homeMainExists);
+  unactiveSection(homeWhenEmpty);
 });
+// addCustomerSupBtn.addEventListener("click", );
 // addCustomerSupBtn.addEventListener("click", homeAppearDisappear);
 
 function singleBtn(input, btn) {
@@ -67,6 +72,22 @@ function createList() {
   homeListWrapper.insertBefore(list, homeListWrapper.firstChild);
 }
 
+let c = 0;
+
+function saveList() {
+  c++;
+  var customerName;
+  var supplierName;
+
+  arr = new Array();
+
+  customerName = addCusSupNameInput.value;
+  arr.push(customerName);
+  console.log(customerName);
+  console.log(arr);
+  localStorage.setItem(`customer${c}`, JSON.stringify(arr));
+}
+
 function homeAppearDisappear() {
   if (homeLists.length === 0) {
     activeSection(homeWhenEmpty);
@@ -77,4 +98,6 @@ function homeAppearDisappear() {
   }
 }
 
+// setInterval(() => {
 homeAppearDisappear();
+// }, 1000);
