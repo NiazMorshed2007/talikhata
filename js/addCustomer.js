@@ -15,6 +15,8 @@ var homeMainExists = document.querySelector(".home-main-when-exists");
 var homeListWrapper = document.querySelector(".home-list-wrapper");
 var homeLists = document.querySelectorAll(".home-list-wrapper > .list");
 
+// var logoName = document.querySelector(".logo-name");
+
 customerSupplierCategories.forEach((e, i) => {
   selectCategory(e, i);
   e.addEventListener("click", () => {
@@ -37,6 +39,8 @@ addCustomerSupBtn.addEventListener("click", () => {
   activeSection(homeMainExists);
   unactiveSection(homeWhenEmpty);
 });
+// addCustomerSupBtn.addEventListener("click", () => {
+// });
 // addCustomerSupBtn.addEventListener("click", );
 // addCustomerSupBtn.addEventListener("click", homeAppearDisappear);
 
@@ -64,7 +68,7 @@ function createList() {
 
   var listLogo = document.createElement("div");
   listLogo.setAttribute("class", "list-logo");
-  listLogo.innerHTML = "NI";
+  logoTxtForClient(listLogo);
 
   list1.appendChild(listLogo);
 
@@ -74,6 +78,7 @@ function createList() {
   name.setAttribute("class", "name");
   name.innerHTML = addCusSupNameInput.value;
   list2.appendChild(name);
+
   if (supplier) {
     var subName = document.createElement("div");
     subName.setAttribute("class", "sub-name");
@@ -131,3 +136,16 @@ function homeAppearDisappear() {
 // setInterval(() => {
 homeAppearDisappear();
 // }, 1000);
+
+function logoTxtForClient(txt) {
+  var name = addCusSupNameInput.value;
+  var wordCount = name.match(/(\w+)/g).length;
+
+  if (wordCount < 2) {
+    txt.innerHTML = name.charAt(0) + name.charAt(1);
+  } else {
+    var matches = name.match(/\b(\w)/g);
+    var acronym = matches.join("");
+    txt.innerHTML = acronym;
+  }
+}
