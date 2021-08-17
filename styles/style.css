@@ -629,7 +629,6 @@
 .home .home-wrapper .home-main .home-main-when-exists .home-main-third {
   width: 100%;
   height: 80%;
-  border: 1px solid black;
   overflow-y: scroll;
 }
 
