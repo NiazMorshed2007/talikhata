@@ -9,6 +9,12 @@ var customerSupplierSec = document.querySelector(".add-customer-supplier");
 let customer = false;
 let supplier = false;
 
+// total customer or supplier
+var ttlCus = document.querySelector(".total-customers");
+var ttlSup = document.querySelector(".total-suppliers");
+let ttlCusNum = 0;
+let ttlSupNum = 0;
+
 // help --------------------------------------------------------------------
 var helpSection = document.querySelector(".help");
 
@@ -129,4 +135,29 @@ function toggleAnswer(e, i) {
 
 function unactiveSection(section) {
   section.classList.remove("active");
+}
+
+var numbers = {
+  0: "০",
+  1: "১",
+  2: "২",
+  3: "৩",
+  4: "৪",
+  5: "৫",
+  6: "৬",
+  7: "৭",
+  8: "৮",
+  9: "৯",
+};
+
+function replaceNumbers(num) {
+  var output = [];
+  for (var i = 0; i < num.length; ++i) {
+    if (numbers.hasOwnProperty(num[i])) {
+      output.push(numbers[num[i]]);
+    } else {
+      output.push(num[i]);
+    }
+  }
+  return output.join("");
 }

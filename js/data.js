@@ -19,18 +19,16 @@ function nameAndNumber() {
   console.log(localStorage);
 }
 
-function logoTxtFunc(txt) {
+function logoTxtFunc() {
   var name = localStorage.getItem("name")
     ? localStorage.getItem("name")
     : nameInput.value;
-  var wordCount = name.match(/(\w+)/g).length;
+  var wordCount = name.split(" ");
 
-  if (wordCount < 2) {
-    logoTxt.innerHTML = name.charAt(0) + name.charAt(1);
+  if (wordCount.length < 2) {
+    logoTxt.innerHTML = wordCount[0].charAt(0) + wordCount[0].charAt(1);
   } else {
-    var matches = name.match(/\b(\w)/g);
-    var acronym = matches.join("");
-    logoTxt.innerHTML = acronym;
+    logoTxt.innerHTML = wordCount[0].charAt(0) + wordCount[1].charAt(0);
   }
 }
 

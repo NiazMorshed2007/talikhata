@@ -39,10 +39,6 @@ addCustomerSupBtn.addEventListener("click", () => {
   activeSection(homeMainExists);
   unactiveSection(homeWhenEmpty);
 });
-// addCustomerSupBtn.addEventListener("click", () => {
-// });
-// addCustomerSupBtn.addEventListener("click", );
-// addCustomerSupBtn.addEventListener("click", homeAppearDisappear);
 
 function singleBtn(input, btn) {
   if (input.value === "") {
@@ -57,8 +53,17 @@ setInterval(() => {
   btnFunc(addCustomerSupBtn);
 }, 1000);
 
+function cusSupTotalNum() {
+  customer ? ttlCusNum++ : ttlSupNum++;
+  ttlSup.innerHTML = ttlSupNum;
+  ttlCus.innerHTML = ttlCusNum;
+  localStorage.setItem("totalCustomers", ttlCusNum);
+  localStorage.setItem("totalSuppliers", ttlSupNum);
+}
+
 function createList() {
   category();
+  cusSupTotalNum();
 
   var list = document.createElement("div");
   list.setAttribute("class", "list");
@@ -90,8 +95,9 @@ function createList() {
   list3.setAttribute("class", "list-third");
   var h4 = document.createElement("h4");
   var dbt = addCusSupDbtInput.value === "" ? 0 : addCusSupDbtInput.value;
+  var banglaDbt = replaceNumbers(dbt);
   // var decimalDbt = dbt.toFixed(2);
-  h4.innerHTML = dbt + ".00";
+  h4.innerHTML = banglaDbt + ".00";
   if (addCusSupDbtInput.value === "" || supplier) {
     h4.setAttribute("class", "black-txt");
   }
@@ -121,7 +127,7 @@ function saveList() {
   obj["type"] = type;
   obj["name"] = addCusSupNameInput.value;
   obj["number"] = addCusSupNumInput.value;
-  obj["debt"] = addCusSupDbtInput.value;
+  obj["debt"] = replaceNumbers(addCusSupDbtInput.value);
   obj["logoTxt"] = document.querySelector(".list-logo").textContent;
 
   var old_data = JSON.parse(localStorage.getItem("lists"));
@@ -143,13 +149,11 @@ homeAppearDisappear();
 
 function logoTxtForClient(txt) {
   var name = addCusSupNameInput.value;
-  var wordCount = name.match(/(\w+)/g).length;
-
-  if (wordCount < 2) {
-    txt.innerHTML = name.charAt(0) + name.charAt(1);
+  var wordCount = name.split(" ");
+  console.log(wordCount);
+  if (wordCount.length < 2) {
+    txt.innerHTML = wordCount[0].charAt(0) + wordCount[0].charAt(1);
   } else {
-    var matches = name.match(/\b(\w)/g);
-    var acronym = matches.join("");
-    txt.innerHTML = acronym;
+    txt.innerHTML = wordCount[0].charAt(0) + wordCount[1].charAt(0);
   }
 }

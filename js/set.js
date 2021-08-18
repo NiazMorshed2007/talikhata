@@ -83,3 +83,15 @@ function setList() {
 }
 
 setList();
+
+function setTtlCusSup() {
+  var cus = localStorage.getItem("totalCustomers")
+    ? localStorage.getItem("totalCustomers")
+    : 0;
+  var sup = localStorage.getItem("totalSuppliers")
+    ? localStorage.getItem("totalSuppliers")
+    : 0;
+  ttlCus.innerHTML = cus;
+  ttlSup.innerHTML = sup;
+}
+setTtlCusSup();
