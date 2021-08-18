@@ -51,7 +51,16 @@ function singleBtn(input, btn) {
 setInterval(() => {
   singleBtn(addCusSupNameInput, addCustomerSupBtn);
   btnFunc(addCustomerSupBtn);
-}, 1000);
+}, 100);
+
+ttlCusNum =
+  localStorage.getItem("totalCustomers") === null
+    ? 0
+    : localStorage.getItem("totalCustomers");
+ttlSupNum =
+  localStorage.getItem("totalSuppliers") === null
+    ? 0
+    : localStorage.getItem("totalSuppliers");
 
 function cusSupTotalNum() {
   customer ? ttlCusNum++ : ttlSupNum++;

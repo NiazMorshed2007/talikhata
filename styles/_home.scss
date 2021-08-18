@@ -209,9 +209,8 @@
         .home-main-third {
           width: 100%;
           height: 100%;
-          // padding-bottom: 25%;
-          // overflow: hidden;
-          // border: 1px solid black;
+          overflow-x: hidden;
+          padding-bottom: 20%;
           overflow-y: scroll;
           .home-main-third-inner {
             .home-list-wrapper {
