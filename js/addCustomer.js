@@ -33,6 +33,9 @@ homeFromCustomerSupplierBtn.addEventListener("click", () => {
 // console.log(homeLists.length);
 addCustomerSupBtn.addEventListener("click", createList);
 addCustomerSupBtn.addEventListener("click", saveList);
+// addCustomerSupBtn.addEventListener("click", () => {
+// totalDebt(addCusSupDbtInput, ttlDbtCus, ttlDbtMe);
+// });
 
 addCustomerSupBtn.addEventListener("click", () => {
   emptyInput(addCusSupInputAll);

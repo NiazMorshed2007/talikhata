@@ -161,3 +161,14 @@ function replaceNumbers(num) {
   }
   return output.join("");
 }
+
+// function totalDebt(input, cus, sup) {
+//   category();
+//   let dbtForCus = 0;
+//   let dbtForMe = 0;
+//   customer ? (dbtForCus += input.value) : (dbtForMe += input.value);
+//   cus.innerHTML = dbtForCus;
+//   sup.innerHTML = dbtForMe;
+// }
+
+// totalDebt(15, undefined, undefined);
