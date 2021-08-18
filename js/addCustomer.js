@@ -122,6 +122,7 @@ function saveList() {
   obj["name"] = addCusSupNameInput.value;
   obj["number"] = addCusSupNumInput.value;
   obj["debt"] = addCusSupDbtInput.value;
+  obj["logoTxt"] = document.querySelector(".list-logo").textContent;
 
   var old_data = JSON.parse(localStorage.getItem("lists"));
   old_data.push(obj);

@@ -66,7 +66,7 @@
       .home-main-when-exists {
         opacity: 0;
         visibility: hidden;
-        height: 100%;
+        height: 84%;
         @include flex(column);
         .home-main-first {
           width: 100%;
@@ -208,7 +208,7 @@
 
         .home-main-third {
           width: 100%;
-          height: 80%;
+          height: 100%;
           // padding-bottom: 25%;
           // overflow: hidden;
           // border: 1px solid black;
@@ -415,6 +415,8 @@
     .home-footer {
       width: 100%;
       height: 57px;
+      position: fixed;
+      bottom: 0;
       background-color: $most;
       @include flex(row);
       align-items: center;

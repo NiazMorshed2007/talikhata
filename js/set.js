@@ -36,7 +36,7 @@ function setList() {
 
       var listLogo = document.createElement("div");
       listLogo.setAttribute("class", "list-logo");
-      listLogo.innerHTML = "NI";
+      listLogo.innerHTML = lists[x].logoTxt;
 
       list1.appendChild(listLogo);
 
@@ -58,8 +58,10 @@ function setList() {
       list3.setAttribute("class", "list-third");
       var h4 = document.createElement("h4");
       h4.innerHTML = lists[x].debt + ".00";
-      if (lists[x].debt === "" || lists[x].type === "supplier") {
+      if (lists[x].debt === "") {
         h4.innerHTML = 0 + ".00";
+      }
+      if (lists[x].debt === "" || lists[x].type === "supplier") {
         h4.setAttribute("class", "black-txt");
       }
       list3.appendChild(h4);
