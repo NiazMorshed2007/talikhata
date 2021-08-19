@@ -95,3 +95,13 @@ function setTtlCusSup() {
   ttlSup.innerHTML = sup;
 }
 setTtlCusSup();
+
+function setTotalDebt() {
+  var dbtForCus = localStorage.getItem("totalDebtForCustomers");
+  var dbtForMe = localStorage.getItem("totalDebtForMe");
+
+  ttlDbtMe.textContent = dbtForMe;
+  ttlDbtCus.textContent = dbtForCus;
+}
+
+setTotalDebt();

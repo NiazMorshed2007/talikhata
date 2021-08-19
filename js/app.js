@@ -15,6 +15,10 @@ var ttlSup = document.querySelector(".total-suppliers");
 let ttlCusNum = 0;
 let ttlSupNum = 0;
 
+// home------------------------------------------------------------
+var ttlDbtCus = document.getElementById("total-debt-for-customer");
+var ttlDbtMe = document.getElementById("total-debt-for-me");
+
 // help --------------------------------------------------------------------
 var helpSection = document.querySelector(".help");
 
@@ -168,6 +172,11 @@ function totalDebt(input, cus, sup) {
   category();
   let value = parseFloat(input.value);
   customer ? (dbtForCus += value) : (dbtForMe += value);
-  cus.textContent = dbtForCus.toFixed(2);
-  sup.textContent = dbtForMe.toFixed(2);
+  dbtForCusBn = replaceNumbers(dbtForCus.toFixed(2));
+  dbtForMeBn = replaceNumbers(dbtForMe.toFixed(2));
+  cus.textContent = dbtForCusBn;
+  sup.textContent = dbtForMeBn;
+
+  localStorage.setItem("totalDebtForCustomers", dbtForCusBn);
+  localStorage.setItem("totalDebtForMe", dbtForMeBn);
 }
