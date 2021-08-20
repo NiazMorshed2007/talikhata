@@ -206,13 +206,14 @@ function totalDebt(input, cus, sup) {
   localStorage.setItem("totalDebtForMe", dbtForMe.toFixed(2));
 }
 
-// function inputTypeDiv(div, span, cls) {
-//   docu.addEventListener("click", (e) => {
-//     e.target.classList.contains(cls)
-//       ? div.classList.add("active-input")
-//       : div.classList.remove("active-input");
-//     e.target.classList.contains(cls)
-//       ? span.classList.add("span-up")
-//       : span.classList.remove("span-up");
-//   });
-// }
+function filterClients(input, p) {
+  let filterValue = input.value.toUpperCase();
+  for (let i = 0; i < p.length; i++) {
+    let name = p[i].getElementsByTagName("h4")[0];
+    if (name.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+      p[i].style.display = "";
+    } else {
+      p[i].style.display = "none";
+    }
+  }
+}
