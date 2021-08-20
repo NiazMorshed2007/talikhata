@@ -992,12 +992,16 @@
 }
 
 .home .home-wrapper .home-footer > :nth-child(1) {
-  background: #8b1014;
   border-top-left-radius: 20px;
 }
 
 .home .home-wrapper .home-footer > :nth-child(3) {
+  width: 34%;
   border-top-right-radius: 20px;
+}
+
+.home .home-wrapper .home-footer .active {
+  background: #8b1014;
 }
 
 .active {

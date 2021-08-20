@@ -431,11 +431,14 @@
         align-items: center;
       }
       & > :nth-child(1) {
-        background: $active;
         border-top-left-radius: 20px;
       }
       & > :nth-child(3) {
+        width: 34%;
         border-top-right-radius: 20px;
+      }
+      .active {
+        background: $active;
       }
     }
   }

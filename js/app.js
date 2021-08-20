@@ -195,6 +195,7 @@ dbtForMe = Math.floor(storageDbtMe);
 
 function totalDebt(input, cus, sup) {
   category();
+  input.value === "" ? (input.value = 0) : input.value;
   let value = parseFloat(input.value);
   customer ? (dbtForCus += value) : (dbtForMe += value);
   dbtForCusBn = replaceNumbers(dbtForCus.toFixed(2));

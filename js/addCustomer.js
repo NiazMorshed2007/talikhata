@@ -131,6 +131,7 @@ function createList() {
 function saveList() {
   category();
   var type = customer ? "customer" : "supplier";
+  addCusSupDbtInput.value === "" ? 0 : addCusSupDbtInput.value;
 
   customerName = addCusSupNameInput.value;
   localStorage.getItem("lists") === null
