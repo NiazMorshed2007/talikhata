@@ -141,7 +141,7 @@ function unactiveSection(section) {
   section.classList.remove("active");
 }
 
-var numbers = {
+var enToBnNumbers = {
   0: "০",
   1: "১",
   2: "২",
@@ -154,11 +154,24 @@ var numbers = {
   9: "৯",
 };
 
+var bnToEnNumbers = {
+  "০": 0,
+  "১": 1,
+  "২": 2,
+  "৩": 3,
+  "৪": 4,
+  "৫": 5,
+  "৬": 6,
+  "৭": 7,
+  "৮": 8,
+  "৯": 9,
+};
+
 function replaceNumbers(num) {
   var output = [];
   for (var i = 0; i < num.length; ++i) {
-    if (numbers.hasOwnProperty(num[i])) {
-      output.push(numbers[num[i]]);
+    if (enToBnNumbers.hasOwnProperty(num[i])) {
+      output.push(enToBnNumbers[num[i]]);
     } else {
       output.push(num[i]);
     }
@@ -168,6 +181,16 @@ function replaceNumbers(num) {
 
 let dbtForCus = 0;
 let dbtForMe = 0;
+// dbtForCus =
+//   localStorage.getItem("totalDebtForCustomers") !== null
+//     ? localStorage.getItem("totalDebtForCustomers")
+//     : 0;
+// dbtForMe =
+//   localStorage.getItem("totalDebtForMe") !== null
+//     ? localStorage.getItem("totalDebtForMe")
+//     : 0;
+// console.log(localStorage.getItem("totalDebtForCustomers") !== null);
+
 function totalDebt(input, cus, sup) {
   category();
   let value = parseFloat(input.value);
@@ -180,3 +203,14 @@ function totalDebt(input, cus, sup) {
   localStorage.setItem("totalDebtForCustomers", dbtForCusBn);
   localStorage.setItem("totalDebtForMe", dbtForMeBn);
 }
+
+// function inputTypeDiv(div, span, cls) {
+//   docu.addEventListener("click", (e) => {
+//     e.target.classList.contains(cls)
+//       ? div.classList.add("active-input")
+//       : div.classList.remove("active-input");
+//     e.target.classList.contains(cls)
+//       ? span.classList.add("span-up")
+//       : span.classList.remove("span-up");
+//   });
+// }

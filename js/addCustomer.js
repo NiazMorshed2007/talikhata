@@ -17,6 +17,8 @@ var homeLists = document.querySelectorAll(".home-list-wrapper > .list");
 
 // var logoName = document.querySelector(".logo-name");
 
+// inpu
+
 customerSupplierCategories.forEach((e, i) => {
   selectCategory(e, i);
   e.addEventListener("click", () => {
@@ -107,7 +109,7 @@ function createList() {
   list3.setAttribute("class", "list-third");
   var h4 = document.createElement("h4");
   var dbt = addCusSupDbtInput.value === "" ? 0 : addCusSupDbtInput.value;
-  var banglaDbt = replaceNumbers(dbt);
+  var banglaDbt = replaceNumbers(dbt, enToBnNumbers);
   // var decimalDbt = dbt.toFixed(2);
   h4.innerHTML = banglaDbt + ".00";
   if (addCusSupDbtInput.value === "" || supplier) {
@@ -139,7 +141,7 @@ function saveList() {
   obj["type"] = type;
   obj["name"] = addCusSupNameInput.value;
   obj["number"] = addCusSupNumInput.value;
-  obj["debt"] = replaceNumbers(addCusSupDbtInput.value);
+  obj["debt"] = replaceNumbers(addCusSupDbtInput.value, enToBnNumbers);
   obj["logoTxt"] = document.querySelector(".list-logo").textContent;
 
   var old_data = JSON.parse(localStorage.getItem("lists"));

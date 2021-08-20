@@ -146,13 +146,14 @@
                 background: $silverType;
                 border-radius: 14px;
                 caret-color: $active;
-                padding-left: 37px;
+                padding-left: 14%;
               }
               i {
                 position: absolute;
                 display: block;
-                top: 30%;
+                top: 50%;
                 left: 5.5%;
+                transform: translateY(-50%);
               }
             }
           }
