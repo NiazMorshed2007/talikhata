@@ -179,17 +179,19 @@ function replaceNumbers(num) {
   return output.join("");
 }
 
-let dbtForCus = 0;
-let dbtForMe = 0;
-// dbtForCus =
-//   localStorage.getItem("totalDebtForCustomers") !== null
-//     ? localStorage.getItem("totalDebtForCustomers")
-//     : 0;
-// dbtForMe =
-//   localStorage.getItem("totalDebtForMe") !== null
-//     ? localStorage.getItem("totalDebtForMe")
-//     : 0;
-// console.log(localStorage.getItem("totalDebtForCustomers") !== null);
+let dbtForCus;
+let dbtForMe;
+
+let storageDbtCus =
+  localStorage.getItem("totalDebtForCustomers") !== null
+    ? localStorage.getItem("totalDebtForCustomers")
+    : 0;
+let storageDbtMe =
+  localStorage.getItem("totalDebtForMe") !== null
+    ? localStorage.getItem("totalDebtForMe")
+    : 0;
+dbtForCus = Math.floor(storageDbtCus);
+dbtForMe = Math.floor(storageDbtMe);
 
 function totalDebt(input, cus, sup) {
   category();
@@ -200,8 +202,8 @@ function totalDebt(input, cus, sup) {
   cus.textContent = dbtForCusBn;
   sup.textContent = dbtForMeBn;
 
-  localStorage.setItem("totalDebtForCustomers", dbtForCusBn);
-  localStorage.setItem("totalDebtForMe", dbtForMeBn);
+  localStorage.setItem("totalDebtForCustomers", dbtForCus.toFixed(2));
+  localStorage.setItem("totalDebtForMe", dbtForMe.toFixed(2));
 }
 
 // function inputTypeDiv(div, span, cls) {
