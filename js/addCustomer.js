@@ -141,7 +141,7 @@ function saveList() {
   obj["type"] = type;
   obj["name"] = addCusSupNameInput.value;
   obj["number"] = addCusSupNumInput.value;
-  obj["debt"] = replaceNumbers(addCusSupDbtInput.value, enToBnNumbers);
+  obj["debt"] = replaceNumbers(addCusSupDbtInput.value);
   obj["logoTxt"] = document.querySelector(".list-logo").textContent;
 
   var old_data = JSON.parse(localStorage.getItem("lists"));
