@@ -100,8 +100,11 @@ function setTotalDebt() {
   var dbtForCus = localStorage.getItem("totalDebtForCustomers");
   var dbtForMe = localStorage.getItem("totalDebtForMe");
 
-  ttlDbtMe.textContent = dbtForMe;
-  ttlDbtCus.textContent = dbtForCus;
+  dbtForCusBn = replaceNumbers(dbtForCus);
+  dbtForMeBn = replaceNumbers(dbtForMe);
+
+  ttlDbtMe.textContent = dbtForMeBn;
+  ttlDbtCus.textContent = dbtForCusBn;
 }
 
 setTotalDebt();
