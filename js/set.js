@@ -97,8 +97,17 @@ function setTtlCusSup() {
 setTtlCusSup();
 
 function setTotalDebt() {
-  var dbtForCus = localStorage.getItem("totalDebtForCustomers");
-  var dbtForMe = localStorage.getItem("totalDebtForMe");
+  var dbtForCus;
+  var dbtForMe;
+
+  dbtForCus =
+    localStorage.getItem("totalDebtForCustomers") !== null
+      ? localStorage.getItem("totalDebtForCustomers")
+      : 0;
+  dbtForMe =
+    localStorage.getItem("totalDebtForMe") !== null
+      ? localStorage.getItem("totalDebtForMe")
+      : 0;
 
   dbtForCusBn = replaceNumbers(dbtForCus);
   dbtForMeBn = replaceNumbers(dbtForMe);

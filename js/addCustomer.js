@@ -19,6 +19,8 @@ var homeLists = document.querySelectorAll(".home-list-wrapper > .list");
 
 // inpu
 
+hideKeyboard(addCusSupDbtInput);
+
 customerSupplierCategories.forEach((e, i) => {
   selectCategory(e, i);
   e.addEventListener("click", () => {
