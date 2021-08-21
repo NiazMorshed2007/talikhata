@@ -189,9 +189,9 @@ function createList() {
     cusSupCurrentOperandTextElement.innerHTML === ""
       ? 0
       : cusSupCurrentOperandTextElement.innerHTML;
-  var banglaDbt = replaceNumbers(dbt, enToBnNumbers);
-  // var decimalDbt = dbt.toFixed(2);
-  h4.innerHTML = banglaDbt + ".00";
+
+  var banglaDbt = replaceNumbers(parseFloat(dbt).toFixed(2));
+  h4.innerHTML = banglaDbt;
   if (cusSupCurrentOperandTextElement.innerHTML === "" || supplier) {
     h4.setAttribute("class", "black-txt");
   }
