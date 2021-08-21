@@ -7,6 +7,18 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;800&family=Hind+Siliguri:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -305,49 +317,90 @@
             <h4>নতুন কাস্টমার/সাপ্লায়ার</h4>
           </div>
           <div class="add-customer-supplier-main">
-            <div class="add-customer-supplier-main-first">
-              <div class="category-add-customer active">কাস্টমার</div>
-              <div class="category-add-supplier">সাপ্লায়ার</div>
-            </div>
-            <button class="add-from-phonebook">
-              <i class="material-icons">contacts</i>
-              <p>ফোনবুক থেকে যোগ করি</p>
-            </button>
-            <label>
-              <input class="add-customer-supplier-name" type="text" required />
-              <span class="client-category"><!-- adding through js--></span>
-              <i class="material-icons">person_add</i>
-            </label>
-            <label for="number">
-              <input
-                class="add-customer-supplier-number"
-                type="text"
-                onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
-                inputmode="tel"
-                required
-              />
-              <span>মোবাইল নম্বর</span>
-              <i class="material-icons">phone</i>
-            </label>
-            <label for="debt">
-              <!-- <div class="add-cus-sup-debt-input input-type-div"></div> -->
+            <div class="add-customer-supplier-inner-main">
+              <div class="add-customer-supplier-main-first">
+                <div class="category-add-customer active">কাস্টমার</div>
+                <div class="category-add-supplier">সাপ্লায়ার</div>
+              </div>
+              <button class="add-from-phonebook">
+                <i class="material-icons">contacts</i>
+                <p>ফোনবুক থেকে যোগ করি</p>
+              </button>
+              <label>
+                <input
+                  class="add-customer-supplier-name"
+                  type="text"
+                  required
+                />
+                <span class="client-category"><!-- adding through js--></span>
+                <i class="material-icons">person_add</i>
+              </label>
+              <label for="number">
+                <input
+                  class="add-customer-supplier-number"
+                  type="text"
+                  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                  inputmode="tel"
+                  required
+                />
+                <span>মোবাইল নম্বর</span>
+                <i class="material-icons">phone</i>
+              </label>
+              <label for="debt">
+                <div class="add-cus-sup-debt-input input-type-div">
+                  <div cs-data-previous-operand class="previousOperand"></div>
+                  <div cs-data-current-operand class="currentOperand"></div>
+                  <div class="blinking-cursor"></div>
+                </div>
 
-              <input
+                <!-- <input
                 class="add-cus-sup-debt-input"
                 type="text"
                 inputmode="none"
                 onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
                 required
-              />
-              <span>পূর্বের বাকি (জের)</span>
-              <i class="material-icons">attach_money</i>
-            </label>
+              /> -->
+                <span class="cus-sup-span">পূর্বের বাকি (জের)</span>
+                <i class="material-icons">attach_money</i>
+              </label>
+            </div>
+          </div>
+          <div class="add-customer-supplier-footer">
             <button
               id="add-customer-supplier-btn"
               class="add-customer-supplier-btn"
             >
               <h4>নিশ্চিত</h4>
             </button>
+            <div class="add-cus-sup-calculator-wrapper">
+              <div class="add-cus-sup-column1">
+                <button cs-data-all-clear>AC</button>
+                <button cs-data-number>7</button>
+                <button cs-data-number>4</button>
+                <button cs-data-number>1</button>
+                <button cs-data-delete>DEL</button>
+              </div>
+              <div class="add-cus-sup-column2">
+                <button cs-data-operation>%</button>
+                <button cs-data-number>8</button>
+                <button cs-data-number>5</button>
+                <button cs-data-number>2</button>
+                <button cs-data-number>0</button>
+              </div>
+              <div class="add-cus-sup-column3">
+                <button cs-data-operation>/</button>
+                <button cs-data-number>9</button>
+                <button cs-data-number>6</button>
+                <button cs-data-number>3</button>
+                <button cs-data-number>.</button>
+              </div>
+              <div class="add-cus-sup-column4">
+                <button cs-data-operation>X</button>
+                <button cs-data-operation>-</button>
+                <button cs-data-operation>+</button>
+                <button cs-data-equals>=</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

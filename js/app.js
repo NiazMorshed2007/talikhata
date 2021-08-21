@@ -195,8 +195,8 @@ dbtForMe = Math.floor(storageDbtMe);
 
 function totalDebt(input, cus, sup) {
   category();
-  input.value === "" ? (input.value = 0) : input.value;
-  let value = parseFloat(input.value);
+  input.innerHTML === "" ? (input.innerHTML = 0) : input.innerHTML;
+  let value = parseFloat(input.innerHTML);
   customer ? (dbtForCus += value) : (dbtForMe += value);
   dbtForCusBn = replaceNumbers(dbtForCus.toFixed(2));
   dbtForMeBn = replaceNumbers(dbtForMe.toFixed(2));
@@ -219,13 +219,4 @@ function filterClients(input, p) {
   }
 }
 
-// function hideKeyboard(element) {
-//   element.setAttribute("readonly", "readonly"); // Force keyboard to hide on input field.
-//   element.setAttribute("disabled", "true"); // Force keyboard to hide on textarea field.
-//   setTimeout(function () {
-//     element.blur(); //actually close the keyboard
-//     // Remove readonly attribute after keyboard is hidden.
-//     element.removeAttribute("readonly");
-//     element.removeAttribute("disabled");
-//   }, 100);
-// }
+// function

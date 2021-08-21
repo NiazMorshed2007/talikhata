@@ -5,6 +5,10 @@ var addCusSupInputAll = document.querySelectorAll(
 var addCusSupNameInput = document.querySelector(".add-customer-supplier-name");
 var addCusSupNumInput = document.querySelector(".add-customer-supplier-number");
 var addCusSupDbtInput = document.querySelector(".add-cus-sup-debt-input");
+var cusSupSpan = document.querySelector(".cus-sup-span");
+var addCusSupCalWrapper = document.querySelector(
+  ".add-cus-sup-calculator-wrapper"
+);
 
 var homeFromCustomerSupplierBtn = document.querySelector(
   ".home-from-customer-supplier"
@@ -19,7 +23,61 @@ var homeLists = document.querySelectorAll(".home-list-wrapper > .list");
 
 // inpu
 
-// hideKeyboard(addCusSupDbtInput);
+// setting up calculator-----------------------------------------------------------------------
+
+let cusSupNumberButtons = document.querySelectorAll("[cs-data-number]");
+let cusSupOperationButtons = document.querySelectorAll("[cs-data-operation]");
+let cusSupEqualsButton = document.querySelector("[cs-data-equals]");
+let cusSupDeleteButton = document.querySelector("[cs-data-delete]");
+let allClearButton = document.querySelector("[cs-data-all-clear]");
+let cusSupPreviousOperandTextElement = document.querySelector(
+  "[cs-data-previous-operand]"
+);
+let cusSupCurrentOperandTextElement = document.querySelector(
+  "[cs-data-current-operand]"
+);
+
+const calculator = new Calculator(
+  cusSupPreviousOperandTextElement,
+  cusSupCurrentOperandTextElement
+);
+
+cusSupNumberButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    calculator.appendNumber(button.innerText);
+    calculator.updateDisplay();
+  });
+});
+
+cusSupOperationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    calculator.chooseOperation(button.innerText);
+    calculator.updateDisplay();
+  });
+});
+
+cusSupEqualsButton.addEventListener("click", (button) => {
+  calculator.compute();
+  calculator.updateDisplay();
+});
+
+allClearButton.addEventListener("click", (button) => {
+  calculator.clear();
+  calculator.updateDisplay();
+});
+
+cusSupDeleteButton.addEventListener("click", (button) => {
+  calculator.delete();
+  calculator.updateDisplay();
+});
+
+function validField(span, field) {
+  field.innerHTML !== ""
+    ? span.classList.add("span-active")
+    : span.classList.remove("span-active");
+}
+
+toggleInputDiv(addCusSupDbtInput);
 
 customerSupplierCategories.forEach((e, i) => {
   selectCategory(e, i);
@@ -34,18 +92,35 @@ customerSuppBtn.addEventListener("click", () => {
 homeFromCustomerSupplierBtn.addEventListener("click", () => {
   unactiveSection(customerSupplierSec);
 });
-// console.log(homeLists.length);
 addCustomerSupBtn.addEventListener("click", createList);
 addCustomerSupBtn.addEventListener("click", saveList);
 addCustomerSupBtn.addEventListener("click", () => {
-  totalDebt(addCusSupDbtInput, ttlDbtCus, ttlDbtMe);
+  totalDebt(cusSupCurrentOperandTextElement, ttlDbtCus, ttlDbtMe);
 });
 
 addCustomerSupBtn.addEventListener("click", () => {
-  emptyInput(addCusSupInputAll);
+  addCusSupNameInput.value = "";
+  addCusSupNumInput.value = "";
+  cusSupCurrentOperandTextElement.innerHTML = "";
   activeSection(homeMainExists);
   unactiveSection(homeWhenEmpty);
+  unactiveSection(addCusSupCalWrapper);
 });
+
+function toggleInputDiv(el) {
+  document
+    .querySelector(".add-customer-supplier-main")
+    .addEventListener("click", (e) => {
+      if (e.target.classList.contains("input-type-div")) {
+        el.classList.add("active");
+        addCusSupCalWrapper.classList.add("active");
+      } else {
+        el.classList.remove("active");
+        addCusSupCalWrapper.classList.remove("active");
+      }
+      validField(cusSupSpan, cusSupCurrentOperandTextElement);
+    });
+}
 
 function singleBtn(input, btn) {
   if (input.value === "") {
@@ -110,11 +185,14 @@ function createList() {
   var list3 = document.createElement("div");
   list3.setAttribute("class", "list-third");
   var h4 = document.createElement("h4");
-  var dbt = addCusSupDbtInput.value === "" ? 0 : addCusSupDbtInput.value;
+  var dbt =
+    cusSupCurrentOperandTextElement.innerHTML === ""
+      ? 0
+      : cusSupCurrentOperandTextElement.innerHTML;
   var banglaDbt = replaceNumbers(dbt, enToBnNumbers);
   // var decimalDbt = dbt.toFixed(2);
   h4.innerHTML = banglaDbt + ".00";
-  if (addCusSupDbtInput.value === "" || supplier) {
+  if (cusSupCurrentOperandTextElement.innerHTML === "" || supplier) {
     h4.setAttribute("class", "black-txt");
   }
   list3.appendChild(h4);
@@ -133,7 +211,9 @@ function createList() {
 function saveList() {
   category();
   var type = customer ? "customer" : "supplier";
-  addCusSupDbtInput.value === "" ? 0 : addCusSupDbtInput.value;
+  cusSupCurrentOperandTextElement.innerHTML === ""
+    ? 0
+    : cusSupCurrentOperandTextElement.innerHTML;
 
   customerName = addCusSupNameInput.value;
   localStorage.getItem("lists") === null
@@ -144,7 +224,7 @@ function saveList() {
   obj["type"] = type;
   obj["name"] = addCusSupNameInput.value;
   obj["number"] = addCusSupNumInput.value;
-  obj["debt"] = replaceNumbers(addCusSupDbtInput.value);
+  obj["debt"] = replaceNumbers(cusSupCurrentOperandTextElement.innerHTML);
   obj["logoTxt"] = document.querySelector(".list-logo").textContent;
 
   var old_data = JSON.parse(localStorage.getItem("lists"));
