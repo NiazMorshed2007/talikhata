@@ -309,6 +309,71 @@
         </div>
       </div>
 
+      <!-- edit section------------------------------------------------------------------------------------------- -->
+      <div class="edit-section">
+        <div class="inner-edit-section">
+          <div class="edit-section-header">
+            <i class="material-icons leave-edit-sec">arrow_back</i>
+            <h3>আপনার তথ্যসমূহ</h3>
+          </div>
+          <div class="edit-section-main">
+            <div class="edit-section-inner-main">
+              <div>
+                <div class="edit-logo-wrapper">
+                  <div class="edit-logo"></div>
+                </div>
+                <div for="">
+                  <input class="your-name-edit-input" type="text" required />
+                  <span>আপনার নাম</span>
+                </div>
+              </div>
+              <div>
+                <input class="edit-business-name-input" type="text" required />
+                <span>ব্যবসা প্রতিষ্ঠানের নাম</span>
+              </div>
+              <div>
+                <input class="edit-business-type-input" type="text" required />
+                <span>ব্যবসার ধরণ</span>
+              </div>
+              <div>
+                <input
+                  class="edit-license-input"
+                  type="text"
+                  required
+                  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                />
+                <span>ট্রেড লাইসেন্স নম্বর</span>
+              </div>
+              <div>
+                <input
+                  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                  class="edit-nid-input"
+                  type="text"
+                  required
+                />
+                <span>NID নম্বর</span>
+              </div>
+              <div>
+                <input
+                  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+                  class="edit-business-year"
+                  type="text"
+                  required
+                />
+                <span>ব্যবসা প্রতিষ্ঠানের আনুমানিক বয়স (বছর)</span>
+              </div>
+              <div>
+                <input class="edit-address-input" type="text" required />
+                <span>ব্যবসা প্রতিষ্ঠানের ঠিকানা</span>
+              </div>
+              <button id="edit-section-btn" class="edit-section-btn">
+                নিশ্চিত
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- add customer or supplier ---------------------------------------------------------------------------------------->
       <div class="add-customer-supplier">
         <div class="add-customer-supplier-inner">
@@ -716,5 +781,6 @@
     <script src="js/calculator.js"></script>
     <script src="js/addCustomer.js"></script>
     <script src="js/filter.js"></script>
+    <script src="js/editPro.js"></script>
   </body>
 </html>

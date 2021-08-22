@@ -1009,6 +1009,217 @@
           transform: translateY(0%);
 }
 
+.edit-section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.edit-section .inner-edit-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.edit-section .inner-edit-section .edit-section-header {
+  width: 100%;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff0f1;
+  gap: 0.6em;
+  padding-left: 7px;
+  -webkit-box-shadow: 10px -3px 10px silver;
+          box-shadow: 10px -3px 10px silver;
+}
+
+.edit-section .inner-edit-section .edit-section-header h3 {
+  font-size: 17px;
+}
+
+.edit-section .inner-edit-section .edit-section-header i {
+  font-size: 20px;
+}
+
+.edit-section .inner-edit-section .edit-section-main {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3em;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main div {
+  width: 95%;
+  padding: 7px;
+  position: relative;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main div input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 7px;
+  padding: 17px;
+  outline: none;
+  border: 1px solid #b1b1b1;
+  font-size: 16px;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main div input:focus {
+  border: 2px solid #8b1014;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main div input:focus ~ span {
+  font-size: 14px;
+  -webkit-transform: translateY(-38px);
+          transform: translateY(-38px);
+  color: #8b1014;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main div input:valid ~ span {
+  -webkit-transform: translateY(-38px);
+          transform: translateY(-38px);
+  font-size: 14px;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main div span {
+  position: absolute;
+  display: block;
+  color: #b1b1b1;
+  top: 18%;
+  left: 8%;
+  pointer-events: none;
+  font-size: 14px;
+  background: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  top: 50%;
+  left: 8%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 17px;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main button {
+  width: 90%;
+  border-radius: 40px;
+  padding: 15px;
+  border: none;
+  background: #bf1313;
+  color: white;
+  margin-top: 20px;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) {
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5em;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) .edit-logo-wrapper {
+  width: 19%;
+  height: 100%;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) .edit-logo-wrapper div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: blanchedalmond;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) div {
+  position: relative;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) div input {
+  width: 100%;
+  height: 86%;
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) div input:focus ~ span {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) div input:valid ~ span {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.edit-section .inner-edit-section .edit-section-main .edit-section-inner-main > :nth-child(1) div span {
+  position: absolute;
+  display: block;
+  color: #b1b1b1;
+  top: 18%;
+  left: 8%;
+  pointer-events: none;
+  font-size: 14px;
+  background: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  top: 50%;
+  left: 8%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 17px;
+}
+
 .modal {
   width: 100%;
   height: 100%;
@@ -1414,7 +1625,6 @@
   font-size: 12px;
   -webkit-transform: translateY(-17px);
           transform: translateY(-17px);
-  color: #8b1014;
 }
 
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-inner-main label span {

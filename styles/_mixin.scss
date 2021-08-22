@@ -10,6 +10,18 @@
   transform: translateY(-10px);
 }
 
+@mixin header {
+  width: 100%;
+  padding: 12px;
+  // height: 9%;
+  @include flex(row);
+  align-items: center;
+  background: $pinkType;
+  gap: 0.6em;
+  padding-left: 7px;
+  box-shadow: 10px -3px 10px silver;
+}
+
 @mixin forInput {
   width: 100%;
   padding-top: 10px;

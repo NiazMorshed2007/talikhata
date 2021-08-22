@@ -14,15 +14,7 @@
     position: relative;
     @include flex(column);
     .add-customer-supplier-header {
-      width: 100%;
-      padding: 12px;
-      // height: 9%;
-      @include flex(row);
-      align-items: center;
-      background: $pinkType;
-      gap: 0.6em;
-      padding-left: 7px;
-      box-shadow: 10px -3px 10px silver;
+      @include header;
       z-index: 1;
       i {
         font-size: 22px;
@@ -142,7 +134,7 @@
           input:valid ~ span {
             font-size: 12px;
             transform: translateY(-17px);
-            color: $active;
+            // color: $active;
           }
           span {
             @include inputSpan;
