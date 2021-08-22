@@ -71,12 +71,6 @@ cusSupDeleteButton.addEventListener("click", (button) => {
   calculator.updateDisplay();
 });
 
-function validField(span, field) {
-  field.innerHTML !== ""
-    ? span.classList.add("span-active")
-    : span.classList.remove("span-active");
-}
-
 toggleInputDiv(addCusSupDbtInput);
 
 customerSupplierCategories.forEach((e, i) => {
@@ -105,6 +99,7 @@ addCustomerSupBtn.addEventListener("click", () => {
   activeSection(homeMainExists);
   unactiveSection(homeWhenEmpty);
   unactiveSection(addCusSupCalWrapper);
+  addCusSupDbtInput.classList.remove("active");
 });
 
 function toggleInputDiv(el) {
@@ -122,6 +117,12 @@ function toggleInputDiv(el) {
     });
 }
 
+function validField(span, field) {
+  field.innerHTML !== ""
+    ? span.classList.add("span-active")
+    : span.classList.remove("span-active");
+}
+
 function singleBtn(input, btn) {
   if (input.value === "") {
     btn.disabled = true;
@@ -133,6 +134,7 @@ function singleBtn(input, btn) {
 setInterval(() => {
   singleBtn(addCusSupNameInput, addCustomerSupBtn);
   btnFunc(addCustomerSupBtn);
+  checkCalculateBox(cusSupPreviousOperandTextElement, addCustomerSupBtn);
 }, 100);
 
 ttlCusNum =
@@ -150,6 +152,18 @@ function cusSupTotalNum() {
   ttlCus.innerHTML = ttlCusNum;
   localStorage.setItem("totalCustomers", ttlCusNum);
   localStorage.setItem("totalSuppliers", ttlSupNum);
+}
+
+function checkCalculateBox(elem, btn) {
+  var letter = elem.innerHTML.split("");
+  for (let i = 0; i < letter.length; i++) {
+    if (letter[i] === "X" || "+" || "-" || "/" || "%") {
+      btn.disabled = true;
+    } else {
+      btn.disabled = false;
+    }
+  }
+  btnFunc(btn);
 }
 
 function createList() {
@@ -218,7 +232,7 @@ function saveList() {
   customerName = addCusSupNameInput.value;
   localStorage.getItem("lists") === null
     ? localStorage.setItem("lists", "[]")
-    : console.log("not stored lists yet");
+    : console.log("not stored any lists yet");
 
   obj = new Object();
   obj["type"] = type;
