@@ -19,6 +19,7 @@ welcomeBtn.addEventListener("click", () => {
 });
 welcomeBtn.addEventListener("click", () => {
   activeSection(setCodeSection);
+  getValues(editAllInput);
 });
 setInterval(() => {
   disableBtn(welcomeInput, welcomeBtn);

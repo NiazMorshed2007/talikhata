@@ -75,7 +75,6 @@ function setList() {
       list.appendChild(list3);
 
       homeListWrapper.insertBefore(list, homeListWrapper.firstChild);
-      // }
     }
   } else {
     console.log("store something");
@@ -114,6 +113,7 @@ function setTotalDebt() {
 
   ttlDbtMe.textContent = dbtForMeBn;
   ttlDbtCus.textContent = dbtForCusBn;
+  document.getElementById("total-sold").textContent = dbtForCusBn;
 }
 
 setTotalDebt();

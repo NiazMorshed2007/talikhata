@@ -1,9 +1,7 @@
 var goEditSec = document.querySelector("#edit-profile");
 var leaveEditSec = document.querySelector(".leave-edit-sec");
 var editSec = document.querySelector(".edit-section");
-var editAllInput = document.querySelectorAll(
-  ".edit-section-inner-main  div  input"
-);
+
 var editSecBtn = document.getElementById("edit-section-btn");
 
 console.log(editAllInput);
@@ -63,12 +61,4 @@ function updateEdited() {
   });
 }
 
-function getValues() {
-  editAllInput[1].value = localStorage.getItem("name");
-  editAllInput[5].value =
-    localStorage.getItem("experience") === null
-      ? 0
-      : localStorage.getItem("experience");
-}
-
-getValues();
+getValues(editAllInput);

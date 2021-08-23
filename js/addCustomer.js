@@ -95,7 +95,8 @@ addCustomerSupBtn.addEventListener("click", () => {
 addCustomerSupBtn.addEventListener("click", () => {
   addCusSupNameInput.value = "";
   addCusSupNumInput.value = "";
-  cusSupCurrentOperandTextElement.innerHTML = "";
+  calculator.clear();
+  calculator.updateDisplay();
   activeSection(homeMainExists);
   unactiveSection(homeWhenEmpty);
   unactiveSection(addCusSupCalWrapper);
