@@ -161,7 +161,7 @@ let storageDbtMe =
 dbtForCus = Math.floor(storageDbtCus);
 dbtForMe = Math.floor(storageDbtMe);
 
-function totalDebt(input, cus, sup) {
+function totalDebt(input, cus, sup, sold) {
   category();
   input.innerHTML === "" ? (input.innerHTML = 0) : input.innerHTML;
   let value = parseFloat(input.innerHTML);
@@ -170,9 +170,29 @@ function totalDebt(input, cus, sup) {
   dbtForMeBn = replaceNumbers(dbtForMe.toFixed(2));
   cus.textContent = dbtForCusBn;
   sup.textContent = dbtForMeBn;
+  sold.textContent = dbtForCusBn;
 
   localStorage.setItem("totalDebtForCustomers", dbtForCus.toFixed(2));
   localStorage.setItem("totalDebtForMe", dbtForMe.toFixed(2));
+}
+
+function toggleInputDiv(el, p) {
+  document.querySelector(p).addEventListener("click", (e) => {
+    if (e.target.classList.contains("input-type-div")) {
+      el.classList.add("active");
+      addCusSupCalWrapper.classList.add("active");
+    } else {
+      el.classList.remove("active");
+      addCusSupCalWrapper.classList.remove("active");
+    }
+    validField(cusSupSpan, cusSupCurrentOperandTextElement);
+  });
+}
+
+function validField(span, field) {
+  field.innerHTML !== ""
+    ? span.classList.add("span-active")
+    : span.classList.remove("span-active");
 }
 
 function filterClients(input, p) {

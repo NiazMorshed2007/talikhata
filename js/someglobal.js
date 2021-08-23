@@ -18,6 +18,7 @@ let ttlSupNum = 0;
 // home------------------------------------------------------------
 var ttlDbtCus = document.getElementById("total-debt-for-customer");
 var ttlDbtMe = document.getElementById("total-debt-for-me");
+var ttlSold = document.getElementById("total-sold");
 
 // help --------------------------------------------------------------------
 var helpSection = document.querySelector(".help");

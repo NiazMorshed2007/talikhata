@@ -19,7 +19,7 @@ editSecBtn.addEventListener("click", () => {
   updateEdited();
   logoTxtFunc();
   unactiveSection(editSec);
-  getValues();
+  getValues(editAllInput);
 });
 
 function editProfile() {

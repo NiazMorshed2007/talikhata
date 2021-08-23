@@ -113,7 +113,7 @@ function setTotalDebt() {
 
   ttlDbtMe.textContent = dbtForMeBn;
   ttlDbtCus.textContent = dbtForCusBn;
-  document.getElementById("total-sold").textContent = dbtForCusBn;
+  ttlSold.textContent = dbtForCusBn;
 }
 
 setTotalDebt();

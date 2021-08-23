@@ -71,7 +71,7 @@ cusSupDeleteButton.addEventListener("click", (button) => {
   calculator.updateDisplay();
 });
 
-toggleInputDiv(addCusSupDbtInput);
+toggleInputDiv(addCusSupDbtInput, ".add-customer-supplier-main");
 
 customerSupplierCategories.forEach((e, i) => {
   selectCategory(e, i);
@@ -89,7 +89,7 @@ homeFromCustomerSupplierBtn.addEventListener("click", () => {
 addCustomerSupBtn.addEventListener("click", createList);
 addCustomerSupBtn.addEventListener("click", saveList);
 addCustomerSupBtn.addEventListener("click", () => {
-  totalDebt(cusSupCurrentOperandTextElement, ttlDbtCus, ttlDbtMe);
+  totalDebt(cusSupCurrentOperandTextElement, ttlDbtCus, ttlDbtMe, ttlSold);
 });
 
 addCustomerSupBtn.addEventListener("click", () => {
@@ -101,28 +101,8 @@ addCustomerSupBtn.addEventListener("click", () => {
   unactiveSection(homeWhenEmpty);
   unactiveSection(addCusSupCalWrapper);
   addCusSupDbtInput.classList.remove("active");
+  cusSupSpan.classList.remove("span-active");
 });
-
-function toggleInputDiv(el) {
-  document
-    .querySelector(".add-customer-supplier-main")
-    .addEventListener("click", (e) => {
-      if (e.target.classList.contains("input-type-div")) {
-        el.classList.add("active");
-        addCusSupCalWrapper.classList.add("active");
-      } else {
-        el.classList.remove("active");
-        addCusSupCalWrapper.classList.remove("active");
-      }
-      validField(cusSupSpan, cusSupCurrentOperandTextElement);
-    });
-}
-
-function validField(span, field) {
-  field.innerHTML !== ""
-    ? span.classList.add("span-active")
-    : span.classList.remove("span-active");
-}
 
 function singleBtn(input, btn) {
   if (input.value === "") {
