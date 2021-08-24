@@ -85,6 +85,10 @@ customerSuppBtn.addEventListener("click", () => {
 });
 homeFromCustomerSupplierBtn.addEventListener("click", () => {
   unactiveSection(customerSupplierSec);
+  calculator.clear();
+  calculator.updateDisplay();
+  addCusSupNameInput.value = "";
+  addCusSupNumInput.value = "";
 });
 addCustomerSupBtn.addEventListener("click", createList);
 addCustomerSupBtn.addEventListener("click", saveList);

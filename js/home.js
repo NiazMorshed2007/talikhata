@@ -11,15 +11,3 @@ helpBtn.addEventListener("click", () => {
 homeFooter.forEach((e, i) => {
   toggleBetweenSec(e, i, homeFooter);
 });
-
-function toggleBetweenSec(e, i, p) {
-  e.addEventListener("click", () => {
-    for (let j = 0; j < p.length; j++) {
-      if (i == j) {
-        p[i].classList.add("active");
-      } else {
-        p[j].classList.remove("active");
-      }
-    }
-  });
-}

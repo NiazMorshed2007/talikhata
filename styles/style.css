@@ -1066,7 +1066,6 @@
 .cash-section .inner-cash-section .cash-sec-main {
   width: 100%;
   height: 80%;
-  background: green;
   overflow: hidden;
   overflow-y: scroll;
   padding-bottom: 20px;
@@ -1084,6 +1083,56 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 29%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1px solid #b1b1b1;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 div i {
+  font-size: 24px;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 div .checked {
+  font-size: 10px;
+  display: none;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 .active {
+  border: 1px solid #8b1014;
+  color: #8b1014;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 .active .checked {
+  display: block;
 }
 
 .cash-section .inner-cash-section .cash-sec-footer {
