@@ -34,3 +34,4 @@ let loggedIn = false;
 var editAllInput = document.querySelectorAll(
   ".edit-section-inner-main  div  input"
 );
+

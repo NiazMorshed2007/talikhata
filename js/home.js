@@ -8,10 +8,6 @@ helpBtn.addEventListener("click", () => {
   activeSection(helpSection);
 });
 
-// InboxBtn.addEventListener('click', () => {
-//   chngHomeToF
-// })
-
 homeFooter.forEach((e, i) => {
   toggleBetweenSec(e, i, homeFooter);
 });

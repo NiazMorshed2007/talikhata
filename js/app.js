@@ -161,7 +161,7 @@ let storageDbtMe =
 dbtForCus = Math.floor(storageDbtCus);
 dbtForMe = Math.floor(storageDbtMe);
 
-function totalDebt(input, cus, sup, sold) {
+function totalDebt(input, cus, sup) {
   category();
   input.innerHTML === "" ? (input.innerHTML = 0) : input.innerHTML;
   let value = parseFloat(input.innerHTML);
@@ -170,7 +170,7 @@ function totalDebt(input, cus, sup, sold) {
   dbtForMeBn = replaceNumbers(dbtForMe.toFixed(2));
   cus.textContent = dbtForCusBn;
   sup.textContent = dbtForMeBn;
-  sold.textContent = dbtForCusBn;
+  // sold.textContent = dbtForCusBn;
 
   localStorage.setItem("totalDebtForCustomers", dbtForCus.toFixed(2));
   localStorage.setItem("totalDebtForMe", dbtForMe.toFixed(2));

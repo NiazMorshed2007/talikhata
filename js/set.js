@@ -2,8 +2,6 @@ var businessName = document.querySelectorAll(".business-name");
 var number = document.querySelectorAll(".number");
 var logoTxt = document.querySelector(".logo-when-no-img");
 
-// var
-
 businessName.forEach((e) => {
   e.innerHTML = localStorage.getItem("name");
 });
@@ -113,7 +111,6 @@ function setTotalDebt() {
 
   ttlDbtMe.textContent = dbtForMeBn;
   ttlDbtCus.textContent = dbtForCusBn;
-  ttlSold.textContent = dbtForCusBn;
 }
 
 setTotalDebt();

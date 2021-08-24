@@ -89,7 +89,7 @@ homeFromCustomerSupplierBtn.addEventListener("click", () => {
 addCustomerSupBtn.addEventListener("click", createList);
 addCustomerSupBtn.addEventListener("click", saveList);
 addCustomerSupBtn.addEventListener("click", () => {
-  totalDebt(cusSupCurrentOperandTextElement, ttlDbtCus, ttlDbtMe, ttlSold);
+  totalDebt(cusSupCurrentOperandTextElement, ttlDbtCus, ttlDbtMe);
 });
 
 addCustomerSupBtn.addEventListener("click", () => {
