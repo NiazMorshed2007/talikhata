@@ -1083,6 +1083,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.7em;
 }
 
 .cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 {
@@ -1110,11 +1111,11 @@
       -ms-flex-align: center;
           align-items: center;
   width: 29%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   border: 1px solid #b1b1b1;
   padding: 6px;
   border-radius: 4px;
+  position: relative;
+  gap: 0.3em;
 }
 
 .cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 div i {
@@ -1133,6 +1134,181 @@
 
 .cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main1 .active .checked {
   display: block;
+  position: absolute;
+  right: 7%;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 {
+  width: 100%;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 4%;
+  gap: 0.6em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  padding-top: 15px;
+  gap: 1em;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label {
+  position: relative;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 17px;
+  border-radius: 40px;
+  outline: none;
+  border: 1.5px solid silver;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input:focus {
+  border: 2px solid #f03030;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input:focus ~ span {
+  color: red;
+  font-size: 11px;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input:valid ~ span {
+  font-size: 11px;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label span {
+  position: absolute;
+  display: block;
+  color: #b1b1b1;
+  top: 18%;
+  left: 8%;
+  pointer-events: none;
+  font-size: 14px;
+  background: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label {
+  width: 95%;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .input-type-div {
+  border: 1px solid #b1b1b1;
+  width: 100%;
+  height: 45px;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .input-type-div .previousOperand {
+  margin-right: 4px;
+  pointer-events: none;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .input-type-div .currentOperand {
+  pointer-events: none;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .input-type-div .blinking-cursor {
+  width: 0.4px;
+  height: 17px;
+  background: #8b1014;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .active {
+  border: 2px solid #8b1014;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .active .blinking-cursor {
+  opacity: 1;
+  -webkit-animation: cursor 1s linear infinite alternate;
+          animation: cursor 1s linear infinite alternate;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .active ~ span {
+  font-size: 12px;
+  -webkit-transform: translateY(-17px);
+          transform: translateY(-17px);
+  color: #8b1014;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .span-active {
+  font-size: 12px;
+  -webkit-transform: translateY(-17px);
+          transform: translateY(-17px);
+  color: #8b1014;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .active ~ span {
+  -webkit-transform: translateY(-31px);
+          transform: translateY(-31px);
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input {
+  border-radius: 7px;
+  padding: 14px;
+  padding-left: 27px;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input:focus {
+  border-color: #8b1014;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input:focus ~ span {
+  color: #8b1014;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label input:valid ~ span {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label span {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 30px;
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label i {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 6px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #868686;
+  font-size: 21px;
 }
 
 .cash-section .inner-cash-section .cash-sec-footer {

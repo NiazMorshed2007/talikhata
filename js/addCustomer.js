@@ -29,7 +29,7 @@ let cusSupNumberButtons = document.querySelectorAll("[cs-data-number]");
 let cusSupOperationButtons = document.querySelectorAll("[cs-data-operation]");
 let cusSupEqualsButton = document.querySelector("[cs-data-equals]");
 let cusSupDeleteButton = document.querySelector("[cs-data-delete]");
-let allClearButton = document.querySelector("[cs-data-all-clear]");
+let cusSupAllClearButton = document.querySelector("[cs-data-all-clear]");
 let cusSupPreviousOperandTextElement = document.querySelector(
   "[cs-data-previous-operand]"
 );
@@ -61,7 +61,7 @@ cusSupEqualsButton.addEventListener("click", (button) => {
   calculator.updateDisplay();
 });
 
-allClearButton.addEventListener("click", (button) => {
+cusSupAllClearButton.addEventListener("click", (button) => {
   calculator.clear();
   calculator.updateDisplay();
 });
