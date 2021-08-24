@@ -671,9 +671,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-bottom: dashed;
   border-width: 1.5px;
   border-color: #868686;
@@ -718,7 +715,6 @@
 }
 
 .home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-second {
-  width: 62%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -741,7 +737,7 @@
 }
 
 .home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-third {
-  width: 19%;
+  width: 79%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -754,6 +750,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-third h4 {

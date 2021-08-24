@@ -55,10 +55,9 @@ function setList() {
       var list3 = document.createElement("div");
       list3.setAttribute("class", "list-third");
       var h4 = document.createElement("h4");
-      h4.innerHTML = lists[x].debt + ".00";
-      if (lists[x].debt === "") {
-        h4.innerHTML = 0 + ".00";
-      }
+      let debt;
+      debt = lists[x].debt === "" ? 0 : lists[x].debt;
+      h4.innerHTML = replaceNumbers(parseFloat(debt).toFixed(2));
       if (lists[x].debt === "" || lists[x].type === "supplier") {
         h4.setAttribute("class", "black-txt");
       }

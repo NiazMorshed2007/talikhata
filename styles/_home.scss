@@ -240,7 +240,6 @@
                 padding-left: 0px;
                 @include flex(row);
                 align-items: center;
-                justify-content: space-between;
                 border-bottom: dashed;
                 border-width: 1.5px;
                 border-color: $darkSilver;
@@ -263,7 +262,6 @@
                   }
                 }
                 .list-second {
-                  width: 62%;
                   height: 100%;
                   @include flex(column);
                   gap: 0.2em;
@@ -277,11 +275,12 @@
                   }
                 }
                 .list-third {
-                  width: 19%;
+                  width: 79%;
                   height: 100%;
                   @include flex(row);
                   gap: 1em;
                   align-items: center;
+                  justify-content: flex-end;
                   h4 {
                     color: $most;
                     font-size: 14px;
