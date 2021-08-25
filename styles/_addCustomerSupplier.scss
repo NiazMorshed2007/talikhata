@@ -138,13 +138,4 @@
   transform: translateX(0%);
 }
 
-@keyframes cursor {
-  0%,
-  40% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
-}
+@include caretAnim;

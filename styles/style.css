@@ -1224,6 +1224,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
+  padding-left: 8%;
 }
 
 .cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .input-type-div .previousOperand {
@@ -1236,7 +1237,7 @@
 }
 
 .cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .input-type-div .blinking-cursor {
-  width: 0.4px;
+  width: 1px;
   height: 17px;
   background: #8b1014;
   pointer-events: none;
@@ -1402,6 +1403,28 @@
 .active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+@-webkit-keyframes cursor {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cursor {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .edit-section {
@@ -1964,7 +1987,7 @@
 }
 
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-inner-main label .input-type-div .blinking-cursor {
-  width: 0.4px;
+  width: 1px;
   height: 17px;
   background: #8b1014;
   pointer-events: none;
@@ -2137,17 +2160,6 @@
 .active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-}
-
-@-webkit-keyframes cursor {
-  0%,
-  40% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes cursor {

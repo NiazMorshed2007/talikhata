@@ -74,8 +74,10 @@
             width: 95%;
             .input-type-div {
               @include inputTypeDiv;
+              padding-left: 8%;
             }
             @include inputTypeActive;
+
             .active ~ span {
               transform: translateY(-31px);
             }
@@ -139,3 +141,5 @@
 .active {
   transform: translateX(0%);
 }
+
+@include caretAnim;
