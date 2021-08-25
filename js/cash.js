@@ -2,7 +2,16 @@ var cashBtn = document.getElementById("cash-btn");
 var homeFromCash = document.querySelector(".home-from-cash");
 var cashSec = document.querySelector(".cash-section");
 var cashDebtInput = document.querySelector(".cash-sec-debt-input");
+var cashDetailsInput = document.querySelector(".cash-details-input");
 var cashSecBtn = document.getElementById("cash-sec-btn");
+var cashSecCalculatorWrapper = document.querySelector(
+  ".cash-sec-calculator-wrapper"
+);
+// var cash
+setInterval(() => {
+  checkCalculateBox(cashPreviousOperandTextElement, cashSecBtn);
+  btnFunc(cashSecBtn);
+}, 100);
 
 cashBtn.addEventListener("click", () => {
   activeSection(cashSec);
@@ -12,6 +21,14 @@ cashSecBtn.addEventListener("click", () => {
   totalCash(cashCurrentOperandTextElement, ttlSold, ttlCash);
   cashCalculator.clear();
   cashCalculator.updateDisplay();
+});
+
+cashDebtInput.addEventListener("click", () => {
+  activeSection(cashSecCalculatorWrapper);
+});
+
+cashDetailsInput.addEventListener("click", () => {
+  unactiveSection(cashSecCalculatorWrapper);
 });
 
 homeFromCash.addEventListener("click", () => {
@@ -62,8 +79,8 @@ cashEqualsButton.addEventListener("click", (button) => {
 });
 
 cashAllClearButton.addEventListener("click", (button) => {
-  cashcalculator.clear();
-  cashcalculator.updateDisplay();
+  cashCalculator.clear();
+  cashCalculator.updateDisplay();
 });
 
 cashDeleteButton.addEventListener("click", (button) => {

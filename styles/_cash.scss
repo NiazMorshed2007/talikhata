@@ -121,8 +121,14 @@
       .cash-sec-btn {
         @include bottomBtn;
       }
+      .disabled {
+        opacity: 0.6;
+      }
       .cash-sec-calculator-wrapper {
         @include formatCalc;
+        display: none;
+      }
+      .active {
         @include flex(row);
         align-items: center;
       }
