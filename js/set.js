@@ -113,3 +113,22 @@ function setTotalDebt() {
 }
 
 setTotalDebt();
+
+function setTotalCash() {
+  var totalSold;
+  var totalCash;
+
+  totalCash =
+    localStorage.getItem("totalCash") !== null
+      ? localStorage.getItem("totalCash")
+      : 0;
+  totalSold =
+    localStorage.getItem("totalSold") !== null
+      ? localStorage.getItem("totalSold")
+      : 0;
+
+  ttlSold.textContent = replaceNumbers(totalSold);
+  ttlCash.textContent = replaceNumbers(totalCash);
+}
+
+setTotalCash();

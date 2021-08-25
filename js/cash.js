@@ -10,6 +10,8 @@ cashBtn.addEventListener("click", () => {
 
 cashSecBtn.addEventListener("click", () => {
   totalCash(cashCurrentOperandTextElement, ttlSold, ttlCash);
+  cashCalculator.clear();
+  cashCalculator.updateDisplay();
 });
 
 homeFromCash.addEventListener("click", () => {

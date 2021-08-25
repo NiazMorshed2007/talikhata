@@ -236,17 +236,14 @@ function cashCategory() {
     sold = true;
     buy = false;
     expense = false;
-    console.log("sold");
   } else if (cashSecCategoryWrapper[1].classList.contains("active")) {
     sold = false;
     buy = true;
     expense = false;
-    console.log("buy");
   } else if (cashSecCategoryWrapper[2].classList.contains("active")) {
     sold = false;
     buy = false;
     expense = true;
-    console.log("expense");
   }
 }
 
@@ -254,9 +251,21 @@ function cashCategoryTxt(e) {
   sold ? (e.textContent = "পেলাম") : (e.textContent = "দিলাম");
 }
 
-let ttlSoldInt = 0;
-let ttlCashInt = 0;
-// function update
+let ttlSoldInt;
+let ttlCashInt;
+
+let ttlSoldIntStorage =
+  localStorage.getItem("totalSold") !== null
+    ? localStorage.getItem("totalSold")
+    : 0;
+let ttlCashIntStorage =
+  localStorage.getItem("totalCash") !== null
+    ? localStorage.getItem("totalCash")
+    : 0;
+
+ttlSoldInt = Math.floor(ttlSoldIntStorage);
+ttlCashInt = Math.floor(ttlCashIntStorage);
+
 function totalCash(input, sell, cash) {
   cashCategory();
   let value = parseFloat(input.innerHTML);
@@ -266,23 +275,12 @@ function totalCash(input, sell, cash) {
   } else {
     ttlCashInt -= value;
   }
-  // sold ? (ttlSoldInt += value ) : (ttlCashInt -= value);
+  ttlCashIntBn = replaceNumbers(ttlCashInt.toFixed(2));
+  ttlSoldIntBn = replaceNumbers(ttlSoldInt.toFixed(2));
 
-  sell.textContent = ttlSoldInt;
-  cash.textContent = ttlCashInt;
+  sell.textContent = ttlSoldIntBn;
+  cash.textContent = ttlCashIntBn;
+
+  localStorage.setItem("totalSold", ttlSoldInt.toFixed(2));
+  localStorage.setItem("totalCash", ttlCashInt.toFixed(2));
 }
-
-// function totalDebt(input, cus, sup) {
-//   category();
-//   input.innerHTML === "" ? (input.innerHTML = 0) : input.innerHTML;
-//   let value = parseFloat(input.innerHTML);
-//   customer ? (dbtForCus += value) : (dbtForMe += value);
-//   dbtForCusBn = replaceNumbers(dbtForCus.toFixed(2));
-//   dbtForMeBn = replaceNumbers(dbtForMe.toFixed(2));
-//   cus.textContent = dbtForCusBn;
-//   sup.textContent = dbtForMeBn;
-//   // sold.textContent = dbtForCusBn;
-
-//   localStorage.setItem("totalDebtForCustomers", dbtForCus.toFixed(2));
-//   localStorage.setItem("totalDebtForMe", dbtForMe.toFixed(2));
-// }
