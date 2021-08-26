@@ -14,12 +14,35 @@
     position: relative;
     @include flex(column);
     .cash-sec-header {
-      @include header;
-      i {
-        font-size: 21px;
+      background: $pinkType;
+      box-shadow: 10px -3px 10px silver;
+      padding-left: 6px;
+      @include flex(row);
+      align-items: center;
+      justify-content: space-between;
+      div {
+        padding: 12px;
+        padding-left: 6px;
+        @include flex(row);
+        gap: 0.3em;
+        align-items: center;
+        i {
+          font-size: 21px;
+        }
+        h4 {
+          font-size: 17px;
+        }
       }
-      h4 {
-        font-size: 17px;
+      & > :nth-child(2) {
+        padding: 12px;
+        @include flex(row);
+        align-items: center;
+        gap: 0.3em;
+        font-size: 14px;
+        color: $most;
+        i {
+          font-size: 14px;
+        }
       }
     }
     .cash-sec-main {
@@ -114,6 +137,26 @@
               color: $darkSilver;
               font-size: 21px;
             }
+          }
+        }
+        .cash-sec-inner-main3 {
+          width: 95%;
+          @include flex(row);
+          align-items: center;
+          justify-content: space-between;
+          div {
+            padding: 7px;
+            @include flex(row);
+            gap: 0.3em;
+            align-items: center;
+            border-radius: 12px;
+            background: rgb(221, 221, 221);
+            font-size: 13px;
+            color: rgb(56, 56, 56);
+            i {
+              font-size: 19px;
+            }
+            // color: $lightBorder;
           }
         }
       }
