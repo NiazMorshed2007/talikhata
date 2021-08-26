@@ -151,10 +151,11 @@
             @include flex(row);
             gap: 0.3em;
             align-items: center;
-            border-radius: 15px;
-            background: rgb(221, 221, 221);
+            border-radius: 11px;
+            background: rgb(243, 243, 243);
             font-size: 13px;
             color: rgb(56, 56, 56);
+            border: 1px solid silver;
             i {
               font-size: 19px;
             }

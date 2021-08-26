@@ -106,12 +106,21 @@ function disableWhenEmpty(elem, btn) {
 function createCashList() {
   cashCategory();
 
+  let value = cashCurrentOperandTextElement.innerHTML;
+  value = parseFloat(value);
+  bnValue = replaceNumbers(value.toFixed(2));
+
   var list = document.createElement("div");
   list.setAttribute("class", "cash-list");
   var list1 = document.createElement("div");
   list1.setAttribute("class", "cash-list1");
   var logo = document.createElement("div");
   logo.setAttribute("class", "logo");
+  sold ? logo.classList.add("sold-logo") : console.log("not sold logo");
+  buy ? logo.classList.add("buy-logo") : console.log("not buy logo");
+  expense
+    ? logo.classList.add("expense-logo")
+    : console.log("not expense logo");
   var icon = document.createElement("i");
   icon.setAttribute("class", "material-icons");
   icon.textContent = "attach_money";
@@ -143,12 +152,14 @@ function createCashList() {
   var list2 = document.createElement("div");
   list2.setAttribute("class", "cash-list2");
   var list2P = document.createElement("p");
-  // sold
-  list2P.textContent = cashCurrentOperandTextElement.innerHTML;
+  !sold ? (list2P.textContent = bnValue) : "";
   list2.appendChild(list2P);
 
   var list3 = document.createElement("div");
   list3.setAttribute("class", "cash-list3");
+  var list3P = document.createElement("p");
+  sold ? (list3P.textContent = bnValue) : "";
+  list3.appendChild(list3P);
 
   list.appendChild(list1);
   list.appendChild(list2);
