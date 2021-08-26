@@ -2744,27 +2744,6 @@
   }
 }
 
-.camera-section {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  background: silver;
-}
-
-.camera-section video {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 * {
   margin: 0;
   padding: 0;
