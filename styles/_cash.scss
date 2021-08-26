@@ -39,7 +39,7 @@
         align-items: center;
         gap: 0.3em;
         font-size: 14px;
-        color: $most;
+        color: $active;
         i {
           font-size: 14px;
         }
@@ -146,17 +146,18 @@
           justify-content: space-between;
           div {
             padding: 7px;
+            padding-left: 10px;
+            padding-right: 10px;
             @include flex(row);
             gap: 0.3em;
             align-items: center;
-            border-radius: 12px;
+            border-radius: 15px;
             background: rgb(221, 221, 221);
             font-size: 13px;
             color: rgb(56, 56, 56);
             i {
               font-size: 19px;
             }
-            // color: $lightBorder;
           }
         }
       }

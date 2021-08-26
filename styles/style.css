@@ -1094,7 +1094,7 @@
           align-items: center;
   gap: 0.3em;
   font-size: 14px;
-  color: #c4161c;
+  color: #8b1014;
 }
 
 .cash-section .inner-cash-section .cash-sec-header > :nth-child(2) i {
@@ -1373,6 +1373,8 @@
 
 .cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main3 div {
   padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1384,7 +1386,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 12px;
+  border-radius: 15px;
   background: #dddddd;
   font-size: 13px;
   color: #383838;
@@ -1507,6 +1509,143 @@
   100% {
     opacity: 0;
   }
+}
+
+.cash-explore {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cash-explore .cash-inner-explore {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-header {
+  width: 100%;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffd6dd;
+  gap: 0.6em;
+  padding-left: 7px;
+  -webkit-box-shadow: 10px -3px 10px silver;
+          box-shadow: 10px -3px 10px silver;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-header h3 {
+  font-size: 16px;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-header i {
+  font-size: 21px;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px;
+  padding-left: 12px;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-filter div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-filter div i {
+  color: #b1b1b1;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-filter div label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3em;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-table-header {
+  width: 100%;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f4f4f4;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-table-header div {
+  width: 30%;
+  text-align: right;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-table-header > :nth-child(1) {
+  width: 40%;
+  text-align: left;
+}
+
+.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .edit-section {
@@ -2603,6 +2742,25 @@
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+}
+
+.camera-section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: silver;
+}
+
+.camera-section video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
 }
 
 * {
