@@ -63,35 +63,67 @@
       width: 100%;
       .cash-explore-inner-main {
         width: 100%;
-        padding: 8px;
+        padding: 0px;
         padding-top: 0px;
         padding-bottom: 9px;
         @include flex(column);
         .cash-list {
           width: 100%;
+          height: 77px;
           @include flex(row);
           align-items: center;
-          div {
+          border-bottom: 2px solid silver;
+          .cash-list2,
+          .cash-list3 {
             width: 30%;
-            text-align: right;
             height: 100%;
+            text-align: right;
+            padding-right: 4px;
           }
           .cash-list1 {
             width: 40%;
-            height: auto;
+            height: 100%;
             text-align: left;
+            padding: 5px;
+            @include flex(row);
+            gap: 0.6em;
+
             .logo {
-              width: 40px;
-              height: 40px;
+              width: 30px;
+              height: 30px;
               background: $active;
               border-radius: 50%;
+              @include flex(row);
+              align-items: center;
+              justify-content: center;
+              padding: 0;
+              i {
+                color: white;
+                font-size: 21px;
+              }
+            }
+            .cash-list-txt {
+              p {
+                font-size: 16px;
+                line-height: 19px;
+              }
+              & > :nth-child(2),
+              & > :nth-child(3) {
+                font-size: 14px;
+                color: rgb(95, 95, 95);
+              }
             }
           }
           .cash-list2 {
             background: $pinkType;
-            padding-right: 3px;
             @include flex(row);
-            justify-content: center;
+            align-items: center;
+            justify-content: flex-end;
+          }
+          .cash-list3 {
+            @include flex(row);
+            align-items: center;
+            justify-content: flex-end;
           }
         }
       }

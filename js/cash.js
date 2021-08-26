@@ -24,6 +24,10 @@ cashBtn.addEventListener("click", () => {
 });
 
 cashSecBtn.addEventListener("click", () => {
+  createCashList();
+});
+
+cashSecBtn.addEventListener("click", () => {
   totalCash(cashCurrentOperandTextElement, ttlSold, ttlCash);
   cashCalculator.clear();
   cashCalculator.updateDisplay();
@@ -97,4 +101,58 @@ cashDeleteButton.addEventListener("click", (button) => {
 
 function disableWhenEmpty(elem, btn) {
   elem.innerHTML === "" ? (btn.disabled = true) : (btn.disabled = false);
+}
+
+function createCashList() {
+  cashCategory();
+
+  var list = document.createElement("div");
+  list.setAttribute("class", "cash-list");
+  var list1 = document.createElement("div");
+  list1.setAttribute("class", "cash-list1");
+  var logo = document.createElement("div");
+  logo.setAttribute("class", "logo");
+  var icon = document.createElement("i");
+  icon.setAttribute("class", "material-icons");
+  icon.textContent = "attach_money";
+  var txt = document.createElement("div");
+  txt.setAttribute("class", "cash-list-txt");
+  var txtP1 = document.createElement("p");
+  if (sold) {
+    txtP1.textContent = "ক্যাশ বেচা";
+  } else if (buy) {
+    txtP1.textContent = "ক্যাশ কেনা";
+  } else if (expense) {
+    txtP1.textContent = "খরচ";
+  }
+
+  var txtP2 = document.createElement("p");
+  txtP2.textContent = "২৬ আগস্ট,";
+
+  var txtP3 = document.createElement("p");
+  txtP3.textContent = "১১ঃ ৪৫, AM";
+
+  txt.appendChild(txtP1);
+  txt.appendChild(txtP2);
+  txt.appendChild(txtP3);
+
+  logo.appendChild(icon);
+  list1.appendChild(logo);
+  list1.appendChild(txt);
+
+  var list2 = document.createElement("div");
+  list2.setAttribute("class", "cash-list2");
+  var list2P = document.createElement("p");
+  // sold
+  list2P.textContent = cashCurrentOperandTextElement.innerHTML;
+  list2.appendChild(list2P);
+
+  var list3 = document.createElement("div");
+  list3.setAttribute("class", "cash-list3");
+
+  list.appendChild(list1);
+  list.appendChild(list2);
+  list.appendChild(list3);
+
+  cashExploreInnerMain.insertBefore(list, cashExploreInnerMain.firstChild);
 }

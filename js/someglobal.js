@@ -15,6 +15,8 @@ let cashCurrentOperandTextElement = document.querySelector(
   "[c-data-current-operand]"
 );
 
+var cashExploreInnerMain = document.querySelector(".cash-explore-inner-main");
+
 var clientCategory = document.querySelector(".client-category");
 var customerSupplierSec = document.querySelector(".add-customer-supplier");
 let customer = false;
