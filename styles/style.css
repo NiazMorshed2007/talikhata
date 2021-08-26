@@ -1643,6 +1643,72 @@
   text-align: left;
 }
 
+.cash-explore .cash-inner-explore .cash-explore-main {
+  width: 100%;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-main .cash-explore-inner-main {
+  width: 100%;
+  padding: 8px;
+  padding-top: 0px;
+  padding-bottom: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-main .cash-explore-inner-main .cash-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-main .cash-explore-inner-main .cash-list div {
+  width: 30%;
+  text-align: right;
+  height: 100%;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-main .cash-explore-inner-main .cash-list .cash-list1 {
+  width: 40%;
+  height: auto;
+  text-align: left;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-main .cash-explore-inner-main .cash-list .cash-list1 .logo {
+  width: 40px;
+  height: 40px;
+  background: #8b1014;
+  border-radius: 50%;
+}
+
+.cash-explore .cash-inner-explore .cash-explore-main .cash-explore-inner-main .cash-list .cash-list2 {
+  background: #ffd6dd;
+  padding-right: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);

@@ -59,6 +59,43 @@
         text-align: left;
       }
     }
+    .cash-explore-main {
+      width: 100%;
+      .cash-explore-inner-main {
+        width: 100%;
+        padding: 8px;
+        padding-top: 0px;
+        padding-bottom: 9px;
+        @include flex(column);
+        .cash-list {
+          width: 100%;
+          @include flex(row);
+          align-items: center;
+          div {
+            width: 30%;
+            text-align: right;
+            height: 100%;
+          }
+          .cash-list1 {
+            width: 40%;
+            height: auto;
+            text-align: left;
+            .logo {
+              width: 40px;
+              height: 40px;
+              background: $active;
+              border-radius: 50%;
+            }
+          }
+          .cash-list2 {
+            background: $pinkType;
+            padding-right: 3px;
+            @include flex(row);
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
 }
 
