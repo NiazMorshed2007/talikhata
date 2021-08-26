@@ -724,6 +724,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.2em;
+  padding-left: 9px;
 }
 
 .home .home-wrapper .home-main .home-main-when-exists .home-main-third .home-main-third-inner .home-list-wrapper .list .list-second .name {
@@ -1265,10 +1266,14 @@
   font-size: 12px;
   -webkit-transform: translateY(-17px);
           transform: translateY(-17px);
-  color: #8b1014;
 }
 
 .cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .active ~ span {
+  -webkit-transform: translateY(-31px);
+          transform: translateY(-31px);
+}
+
+.cash-section .inner-cash-section .cash-sec-main .cash-sec-inner-main .cash-sec-inner-main2 label .span-active {
   -webkit-transform: translateY(-31px);
           transform: translateY(-31px);
 }
@@ -2015,7 +2020,6 @@
   font-size: 12px;
   -webkit-transform: translateY(-17px);
           transform: translateY(-17px);
-  color: #8b1014;
 }
 
 .add-customer-supplier .add-customer-supplier-inner .add-customer-supplier-main .add-customer-supplier-inner-main label input {

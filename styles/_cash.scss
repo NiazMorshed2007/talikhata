@@ -81,6 +81,10 @@
             .active ~ span {
               transform: translateY(-31px);
             }
+
+            .span-active {
+              transform: translateY(-31px);
+            }
             input {
               border-radius: 7px;
               padding: 14px;

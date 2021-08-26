@@ -7,11 +7,17 @@ var cashSecBtn = document.getElementById("cash-sec-btn");
 var cashSecCalculatorWrapper = document.querySelector(
   ".cash-sec-calculator-wrapper"
 );
+var cashSecSpan = document.querySelector(".cash-sec-category-span");
 // var cash
 setInterval(() => {
   checkCalculateBox(cashPreviousOperandTextElement, cashSecBtn);
+  disableWhenEmpty(cashCurrentOperandTextElement, cashSecBtn);
   btnFunc(cashSecBtn);
 }, 100);
+
+setInterval(() => {
+  validField(cashSecSpan, cashCurrentOperandTextElement);
+}, 10);
 
 cashBtn.addEventListener("click", () => {
   activeSection(cashSec);
@@ -21,6 +27,7 @@ cashSecBtn.addEventListener("click", () => {
   totalCash(cashCurrentOperandTextElement, ttlSold, ttlCash);
   cashCalculator.clear();
   cashCalculator.updateDisplay();
+  unactiveSection(cashDebtInput);
 });
 
 cashDebtInput.addEventListener("click", () => {
@@ -45,7 +52,7 @@ cashSecCategoryWrapper.forEach((e, i) => {
   });
 });
 
-toggleInputDiv(cashDebtInput, ".cash-sec-main");
+toggleInputDiv(cashDebtInput, ".cash-sec-main", cashSecSpan);
 
 // set calc
 let cashNumberButtons = document.querySelectorAll("[c-data-number]");
@@ -87,3 +94,7 @@ cashDeleteButton.addEventListener("click", (button) => {
   cashCalculator.delete();
   cashCalculator.updateDisplay();
 });
+
+function disableWhenEmpty(elem, btn) {
+  elem.innerHTML === "" ? (btn.disabled = true) : (btn.disabled = false);
+}

@@ -176,16 +176,18 @@ function totalDebt(input, cus, sup) {
   localStorage.setItem("totalDebtForMe", dbtForMe.toFixed(2));
 }
 
-function toggleInputDiv(el, p) {
+function toggleInputDiv(el, p, span) {
   document.querySelector(p).addEventListener("click", (e) => {
     if (e.target.classList.contains("input-type-div")) {
       el.classList.add("active");
+      span.classList.add("span-active");
       addCusSupCalWrapper.classList.add("active");
     } else {
       el.classList.remove("active");
+      span.classList.remove("span-active");
       addCusSupCalWrapper.classList.remove("active");
     }
-    validField(cusSupSpan, cusSupCurrentOperandTextElement);
+    // validField(cusSupSpan, cusSupCurrentOperandTextElement);
   });
 }
 

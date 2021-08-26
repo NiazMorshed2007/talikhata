@@ -71,7 +71,7 @@ cusSupDeleteButton.addEventListener("click", (button) => {
   calculator.updateDisplay();
 });
 
-toggleInputDiv(addCusSupDbtInput, ".add-customer-supplier-main");
+toggleInputDiv(addCusSupDbtInput, ".add-customer-supplier-main", cusSupSpan);
 
 customerSupplierCategories.forEach((e, i) => {
   selectCategory(e, i);
@@ -118,9 +118,13 @@ function singleBtn(input, btn) {
 
 setInterval(() => {
   singleBtn(addCusSupNameInput, addCustomerSupBtn);
-  btnFunc(addCustomerSupBtn);
   checkCalculateBox(cusSupPreviousOperandTextElement, addCustomerSupBtn);
+  btnFunc(addCustomerSupBtn);
 }, 100);
+
+setInterval(() => {
+  validField(cusSupSpan, cusSupCurrentOperandTextElement);
+}, 10);
 
 ttlCusNum =
   localStorage.getItem("totalCustomers") === null
