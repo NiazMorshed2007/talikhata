@@ -23,6 +23,8 @@ cashBtn.addEventListener("click", () => {
   activeSection(cashSec);
 });
 
+cashSecBtn.addEventListener("click", saveCashList);
+
 cashSecBtn.addEventListener("click", () => {
   createCashList();
 });
@@ -166,4 +168,38 @@ function createCashList() {
   list.appendChild(list3);
 
   cashExploreInnerMain.insertBefore(list, cashExploreInnerMain.firstChild);
+}
+
+function saveCashList() {
+  cashCategory();
+  var type;
+  if (sold) {
+    type = "sold";
+  } else if (buy) {
+    type = "buy";
+  } else if (expense) {
+    type = "expense";
+  }
+
+  var txt;
+  if (sold) {
+    txt = "ক্যাশ বেচা";
+  } else if (buy) {
+    txt = "ক্যাশ কেনা";
+  } else if (expense) {
+    txt = "খরচ";
+  }
+  var num = cashCurrentOperandTextElement.innerHTML;
+
+  localStorage.getItem("cashLists") === null
+    ? localStorage.setItem("cashLists", "[]")
+    : console.log("not stored any lists yet");
+
+  obj = new Object();
+  obj["type"] = type;
+  obj["txt"] = txt;
+  obj["cash"] = num;
+  var old_data = JSON.parse(localStorage.getItem("cashLists"));
+  old_data.push(obj);
+  localStorage.setItem("cashLists", JSON.stringify(old_data));
 }

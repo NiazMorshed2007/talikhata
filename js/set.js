@@ -132,3 +132,84 @@ function setTotalCash() {
 }
 
 setTotalCash();
+
+function setCashList() {
+  var cashLists = JSON.parse(localStorage.getItem("cashLists"))
+    ? JSON.parse(localStorage.getItem("cashLists"))
+    : console.log("not stored any cash list");
+
+  if (cashLists !== undefined) {
+    for (let z = 0; z < cashLists.length; z++) {
+      console.log(cashLists[z]);
+
+      let type = cashLists[z].type;
+      let value = cashLists[z].cash;
+      let bnValue = replaceNumbers(parseFloat(value).toFixed(2));
+      //
+
+      var list = document.createElement("div");
+      list.setAttribute("class", "cash-list");
+      var list1 = document.createElement("div");
+      list1.setAttribute("class", "cash-list1");
+      var logo = document.createElement("div");
+      logo.setAttribute("class", "logo");
+      type === "sold"
+        ? logo.classList.add("sold-logo")
+        : console.log("not sold logo");
+      type === "buy"
+        ? logo.classList.add("buy-logo")
+        : console.log("not buy logo");
+      type === "expense"
+        ? logo.classList.add("expense-logo")
+        : console.log("not expense logo");
+      var icon = document.createElement("i");
+      icon.setAttribute("class", "material-icons");
+      icon.textContent = "attach_money";
+      var txt = document.createElement("div");
+      txt.setAttribute("class", "cash-list-txt");
+      var txtP1 = document.createElement("p");
+      if (type === "sold") {
+        txtP1.textContent = "ক্যাশ বেচা";
+      } else if (type === "buy") {
+        txtP1.textContent = "ক্যাশ কেনা";
+      } else if (type === "expense") {
+        txtP1.textContent = "খরচ";
+      }
+
+      var txtP2 = document.createElement("p");
+      txtP2.textContent = "২৬ আগস্ট,";
+
+      var txtP3 = document.createElement("p");
+      txtP3.textContent = "১১ঃ ৪৫, AM";
+
+      txt.appendChild(txtP1);
+      txt.appendChild(txtP2);
+      txt.appendChild(txtP3);
+
+      logo.appendChild(icon);
+      list1.appendChild(logo);
+      list1.appendChild(txt);
+
+      var list2 = document.createElement("div");
+      list2.setAttribute("class", "cash-list2");
+      var list2P = document.createElement("p");
+      type !== "sold" ? (list2P.textContent = bnValue) : "";
+      list2.appendChild(list2P);
+
+      var list3 = document.createElement("div");
+      list3.setAttribute("class", "cash-list3");
+      var list3P = document.createElement("p");
+      type === "sold" ? (list3P.textContent = bnValue) : "";
+      list3.appendChild(list3P);
+
+      list.appendChild(list1);
+      list.appendChild(list2);
+      list.appendChild(list3);
+
+      cashExploreInnerMain.insertBefore(list, cashExploreInnerMain.firstChild);
+      //
+    }
+  }
+}
+
+setCashList();
